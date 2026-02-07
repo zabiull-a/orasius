@@ -4,6 +4,15 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import About from "./pages/About";
+import WhatWeDo from "./pages/WhatWeDo";
+import Programs from "./pages/Programs";
+import Trainers from "./pages/Trainers";
+import WhyChooseUs from "./pages/WhyChooseUs";
+import Contact from "./pages/Contact";
+import Terms from "./pages/Terms";
+import CodeOfConduct from "./pages/CodeOfConduct";
+import Ethics from "./pages/Ethics";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,7 +25,16 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/about" element={<About />} />
+          <Route path="/what-we-do" element={<WhatWeDo />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/programs/:programId" element={<Programs />} />
+          <Route path="/trainers" element={<Trainers />} />
+          <Route path="/why-choose-us" element={<WhyChooseUs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/code-of-conduct" element={<CodeOfConduct />} />
+          <Route path="/ethics" element={<Ethics />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
