@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 import { BookOpen, Video, Calendar, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import { fadeUp } from "@/lib/animations";
+import heroWhatWeDo from "@/assets/hero-whatwedo.jpg";
+import serviceTraining from "@/assets/service-training.jpg";
+import serviceWebinar from "@/assets/service-webinar.jpg";
+import serviceEvents from "@/assets/service-events.jpg";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 },
-  }),
-};
+const serviceImages = [serviceTraining, serviceWebinar, serviceEvents];
 
 const services = [
   {
@@ -50,8 +50,12 @@ const services = [
 const WhatWeDo = () => {
   return (
     <Layout>
-      <section className="bg-primary py-20 md:py-28">
-        <div className="container">
+      <section
+        className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroWhatWeDo})` }}
+      >
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="container relative z-10">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground">What We Do</h1>
             <p className="mt-4 text-primary-foreground/80 text-lg max-w-2xl">
@@ -69,7 +73,7 @@ const WhatWeDo = () => {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}
               className="grid lg:grid-cols-2 gap-12 items-start"
             >
-              <div>
+              <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent">
                     <s.icon className="h-6 w-6 text-primary" />
@@ -77,6 +81,23 @@ const WhatWeDo = () => {
                   <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">{s.title}</h2>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-lg">{s.desc}</p>
+                <div className="mt-6 space-y-6">
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-2">Who It's For</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{s.audience}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-2">Learning Outcomes</h3>
+                    <ul className="space-y-2">
+                      {s.outcomes.map((o) => (
+                        <li key={o} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                          {o}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
                 <div className="mt-6">
                   <Button asChild>
                     <Link to="/contact">
@@ -85,22 +106,13 @@ const WhatWeDo = () => {
                   </Button>
                 </div>
               </div>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">Who It's For</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{s.audience}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">Learning Outcomes</h3>
-                  <ul className="space-y-2">
-                    {s.outcomes.map((o) => (
-                      <li key={o} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
-                        {o}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className={i % 2 === 1 ? "lg:order-1" : ""}>
+                <img
+                  src={serviceImages[i]}
+                  alt={s.title}
+                  className="rounded-lg shadow-md w-full h-auto object-cover"
+                  loading="lazy"
+                />
               </div>
             </motion.div>
           ))}

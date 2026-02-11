@@ -3,13 +3,9 @@ import { motion } from "framer-motion";
 import { Globe, Award, ShieldCheck, Heart, Handshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 },
-  }),
-};
+import { fadeUp, cardHover } from "@/lib/animations";
+import heroWhyChoose from "@/assets/hero-whychoose.jpg";
+import ctaPartnership from "@/assets/cta-partnership.jpg";
 
 const differentiators = [
   { icon: Globe, title: "Global Perspective", desc: "Training solutions designed for relevance across diverse industries, cultures, and geographies." },
@@ -22,8 +18,12 @@ const differentiators = [
 const WhyChooseUs = () => {
   return (
     <Layout>
-      <section className="bg-primary py-20 md:py-28">
-        <div className="container">
+      <section
+        className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroWhyChoose})` }}
+      >
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="container relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             className="font-display text-4xl md:text-5xl font-bold text-primary-foreground"
@@ -63,7 +63,8 @@ const WhyChooseUs = () => {
               <motion.div
                 key={d.title}
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}
-                className="p-6 rounded-lg bg-background border border-border hover:shadow-md transition-shadow"
+                whileHover={cardHover.whileHover}
+                className="p-6 rounded-lg bg-background border border-border transition-shadow"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent mb-4">
                   <d.icon className="h-5 w-5 text-primary" />
@@ -76,17 +77,21 @@ const WhyChooseUs = () => {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="container text-center max-w-2xl">
-          <h2 className="font-display text-3xl font-semibold text-foreground">Partner With Us</h2>
-          <p className="mt-4 text-muted-foreground">
+      <section
+        className="relative py-20 bg-cover bg-center"
+        style={{ backgroundImage: `url(${ctaPartnership})` }}
+      >
+        <div className="absolute inset-0 bg-primary/90" />
+        <div className="container relative z-10 text-center max-w-2xl">
+          <h2 className="font-display text-3xl font-semibold text-primary-foreground">Partner With Us</h2>
+          <p className="mt-4 text-primary-foreground/80">
             Explore our programs or reach out to discuss how we can support your organization's development goals.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
               <Link to="/programs">Explore Programs</Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>

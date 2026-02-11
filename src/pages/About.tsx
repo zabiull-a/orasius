@@ -1,13 +1,9 @@
 import { motion } from "framer-motion";
 import { Heart, Lightbulb, Shield, Users, Globe } from "lucide-react";
 import Layout from "@/components/layout/Layout";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 },
-  }),
-};
+import { fadeUp, cardHover } from "@/lib/animations";
+import heroAbout from "@/assets/hero-about.jpg";
+import aboutVision from "@/assets/about-vision.jpg";
 
 const values = [
   { icon: Shield, title: "Integrity", desc: "We uphold the highest ethical standards in everything we do." },
@@ -21,8 +17,12 @@ const About = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary py-20 md:py-28">
-        <div className="container">
+      <section
+        className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroAbout})` }}
+      >
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="container relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -50,23 +50,43 @@ const About = () => {
 
       {/* Vision & Mission */}
       <section className="py-20 bg-secondary">
-        <div className="container max-w-3xl space-y-16">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-            <h2 className="font-display text-3xl font-semibold text-foreground mb-6">Our Vision</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Our vision is to become a trusted global partner in professional learning by shaping skills that matter for the future of work. We aim to create lasting impact by bridging the gap between knowledge and real-world application, empowering individuals to grow with confidence and organizations to perform with agility in an ever-changing business environment.
-            </p>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              Over the long term, we see IELENT evolving into a globally connected training ecosystem — collaborating with industry experts, institutions, and organizations across regions to deliver accessible and outcome-driven learning solutions.
-            </p>
-          </motion.div>
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="space-y-12">
+              <div>
+                <h2 className="font-display text-3xl font-semibold text-foreground mb-6">Our Vision</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our vision is to become a trusted global partner in professional learning by shaping skills that matter for the future of work. We aim to create lasting impact by bridging the gap between knowledge and real-world application, empowering individuals to grow with confidence and organizations to perform with agility in an ever-changing business environment.
+                </p>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Over the long term, we see IELENT evolving into a globally connected training ecosystem — collaborating with industry experts, institutions, and organizations across regions to deliver accessible and outcome-driven learning solutions.
+                </p>
+              </div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1}>
-            <h2 className="font-display text-3xl font-semibold text-foreground mb-6">Our Mission</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Our mission is to turn learning into lasting impact through dedication, discipline, and a relentless focus on quality. We commit ourselves every day to designing and delivering training that is practical, relevant, and meaningful — learning that empowers individuals to grow with confidence and enables organizations to perform at their best.
-            </p>
-          </motion.div>
+              <div>
+                <h2 className="font-display text-3xl font-semibold text-foreground mb-6">Our Mission</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our mission is to turn learning into lasting impact through dedication, discipline, and a relentless focus on quality. We commit ourselves every day to designing and delivering training that is practical, relevant, and meaningful — learning that empowers individuals to grow with confidence and enables organizations to perform at their best.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              custom={1}
+              className="hidden lg:block"
+            >
+              <img
+                src={aboutVision}
+                alt="Executive coaching and mentorship"
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
+                loading="lazy"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -84,7 +104,8 @@ const About = () => {
               <motion.div
                 key={v.title}
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}
-                className="text-center p-6 rounded-lg border border-border bg-background hover:shadow-md transition-shadow"
+                whileHover={cardHover.whileHover}
+                className="text-center p-6 rounded-lg border border-border bg-background transition-shadow"
               >
                 <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent">
                   <v.icon className="h-5 w-5 text-primary" />
