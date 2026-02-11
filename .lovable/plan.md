@@ -1,421 +1,189 @@
-Overview
-
-A premium, conversion-focused global website for IELENT built with a Supabase backend to manage trainers, programs, and contact form submissions. The design follows a clean corporate-modern aesthetic using charcoal and deep blue accents on white backgrounds, with strong typography, generous whitespace, and clear conversion pathways.
-
-The platform is structured to support dynamic trainer rotation, scalable program listings, and corporate training enquiries without requiring future redesign.
 
 
----
+# Visual Enhancement: Images and Animations
 
-Pages & Features
+## Overview
 
+Upgrade the IELENT website with professional Unsplash imagery and refined Framer Motion animations across all pages. All changes extend existing components -- no layout or routing rewrites.
 
 ---
 
-1. Home Page
+## 1. Shared Animation Utilities
 
-Hero Section
+**File: `src/lib/animations.ts` (new)**
 
-Headline:
-Global Training & Development for Future-Ready Professionals
+Create a centralized animation variants file to eliminate the duplicated `fadeUp` definition across 7+ page files.
 
-Primary CTA: Explore Programs
-Secondary CTA: Upcoming Webinars
+Variants to include:
+- `fadeUp` -- staggered fade + translateY (existing, centralized)
+- `fadeIn` -- simple opacity fade
+- `scaleOnHover` -- `whileHover` config for cards (scale 1.02, subtle shadow)
+- `staggerContainer` -- parent variant with `staggerChildren` for grid layouts
 
-Introduction Block
-
-Brief overview of IELENT’s global training approach.
-
-Core Focus Areas
-
-Displayed as icon cards across 8 categories:
-
-Business & Leadership
-
-Human Resource Management
-
-Technology
-
-Finance
-
-Supply Chain
-
-Health & Safety
-
-Risk Management
-
-Professional Development
-
-
-Why Choose IELENT (Preview)
-
-Four value propositions with icons:
-
-Expert-Led Learning
-
-Global Perspective
-
-Practical Application
-
-Ethical & Transparent Approach
-
-
-Trainer Spotlight
-
-Dynamic section pulling only Featured + Active trainers from Supabase.
-
-Trainer card includes:
-
-Photo
-
-Name
-
-Expertise
-
-Region
-
-
-CTA: View All Trainers
-
-Footer
-
-Quick links, contact details, and legal links.
-
+All pages will import from this single file instead of redefining locally.
 
 ---
 
-2. About Us Page
+## 2. Smooth Scroll-to-Top on Navigation
 
-Structured content sections:
+**File: `src/components/layout/ScrollToTop.tsx` (new)**
 
-About Us
+A small component using `useLocation` + `useEffect` to scroll to top with `window.scrollTo({ top: 0, behavior: 'smooth' })` on route change.
 
-Our Vision
+**File: `src/App.tsx` (edit)**
 
-Our Mission
-
-
-Core Values (Styled Cards)
-
-Integrity
-Innovation
-Accountability
-Collaboration
-Inclusion
-
+Add `<ScrollToTop />` inside `<BrowserRouter>`.
 
 ---
 
-3. What We Do Page
+## 3. Home Page (`src/pages/Index.tsx`)
 
-Three primary service blocks:
+### Hero Background Image
+- Replace the solid `bg-primary` with an Unsplash corporate training image as a CSS background
+- Add a dark overlay (`bg-primary/85`) for text readability
+- Image: business conference / executive presentation theme
+- Use `bg-cover bg-center` with the image URL
 
-Training Programs
+### Cards: Hover Micro-Interactions
+- Focus Area cards: add `whileHover={{ y: -4, boxShadow: "..." }}` via Framer Motion
+- Why Choose cards: same subtle lift effect
+- Trainer Spotlight cards: add scale(1.02) + shadow on hover
 
-Instructor-led and virtual learning focused on practical skills.
-
-Webinars
-
-Flexible global online sessions.
-
-Professional Events
-
-Workshops, forums, and networking experiences.
-
-Each section includes:
-
-Description
-
-Target Audience
-
-Learning Outcomes
-
-CTA: Enquire / Request Details
-
-
+### CTA Section
+- Add a subtle background image (muted boardroom / collaboration) with an overlay, replacing the plain white section
 
 ---
 
-4. Programs / Offerings Page
+## 4. About Page (`src/pages/About.tsx`)
 
-Corporate Training Section (NEW)
+### Hero
+- Add background image (global professionals / diverse team) with dark overlay, matching the Home hero pattern
 
-Positioned above filters:
-
-Looking for customized training for your organization?
-CTA: Enquire for Corporate Solutions
-
-Filterable Program Grid
-
-Categories:
-
-Leadership
-
-HR
-
-Technology
-
-Finance
-
-Supply Chain
-
-Health & Safety
-
-Risk Management
-
-Professional Development
-
-
-One sample program per category stored in Supabase.
-
-Program Detail View
-
-Includes:
-
-Overview
-
-Learning Objectives
-
-Delivery Format
-
-Duration
-
-Certification Alignment
-
-CTA Buttons:
-
-Request Details
-
-Register Interest
-
-
-
+### Vision & Mission Section
+- Add a side image alongside the text using a 2-column layout on desktop: text left, image right
+- Image: executive coaching / mentorship visual
 
 ---
 
-5. Trainers / Faculty Page
+## 5. What We Do Page (`src/pages/WhatWeDo.tsx`)
 
-Premium grid layout pulling from Supabase.
+### Hero
+- Background image with overlay (workshop / training room setting)
 
-Trainer card fields:
-
-Photo
-
-Full Name
-
-Industry Expertise
-
-Years of Experience
-
-Regions Worked In
-
-
-Homepage spotlight automatically displays only:
-
-Featured = true
-
-Status = Active
-
-
+### Service Sections
+- Each of the 3 service blocks (Training Programs, Webinars, Professional Events) gets a relevant image on the right side of the existing 2-column grid
+- Images: classroom training, virtual meeting setup, networking event
+- Images use `rounded-lg overflow-hidden` with lazy loading
 
 ---
 
-6. Why Choose Us Page
+## 6. Programs Page (`src/pages/Programs.tsx`)
 
-Full differentiator content styled with strong typography and subtle accents emphasizing:
+### Hero
+- Background image with overlay (professional development / learning environment)
 
-Global Perspective
+### Program Cards
+- Add `whileHover={{ y: -4 }}` and a smooth shadow transition to each card
+- Add a small decorative image strip or gradient accent at the top of each card based on category
 
-Industry Practitioner Trainers
-
-Quality Assurance
-
-Ethical Practices
-
-Long-Term Partnerships
-
-
+### Program Detail View
+- Add a hero-style image banner below the header area relevant to the program category
 
 ---
 
-7. Contact Us Page
+## 7. Trainers Page (`src/pages/Trainers.tsx`)
 
-Heading: We’d Love to Hear From You
+### Hero
+- Background image (diverse professionals in a corporate setting)
 
-Contact Form Fields:
-
-Full Name
-
-Email Address
-
-Phone Number (optional)
-
-Organization / Company (optional)
-
-Subject
-
-Message
-
-
-Form includes validation and stores submissions in Supabase.
-
-Sidebar:
-
-Phone
-
-Email
-
-Office Address
-
-
+### Trainer Cards
+- Add hover lift animation (`whileHover={{ y: -6, transition: { duration: 0.2 } }}`)
+- The existing placeholder avatar circles remain -- they will be replaced when real trainer photos are provided
 
 ---
 
-8. Legal Pages
+## 8. Why Choose Us Page (`src/pages/WhyChooseUs.tsx`)
 
-Separate clean layouts for:
+### Hero
+- Background image with overlay
 
-Terms & Conditions
+### Differentiator Cards
+- Add hover lift + shadow micro-interaction
 
-Code of Conduct
-
-Ethics & Compliance / Data Protection
-
-
-
----
-
-Backend (Supabase) – Updated Structure
-
-Trainers Table
-
-Fields:
-
-name
-
-photo_url
-
-expertise
-
-experience_years
-
-regions_worked
-
-featured (boolean) NEW
-
-status (Active / Upcoming / Past) NEW
-
-
-Programs Table
-
-Fields:
-
-title
-
-category
-
-overview
-
-objectives
-
-format
-
-duration
-
-certification
-
-status (Upcoming / Ongoing / Past) NEW
-
-
-Contact Submissions Table
-
-Fields:
-
-full_name
-
-email
-
-phone
-
-organization
-
-subject
-
-message
-
-created_at (timestamp)
-
-
-Security
-
-Public read access for trainers/programs
-
-Insert-only access for contact submissions
-
-
+### Partner CTA Section
+- Add a subtle background image (handshake / partnership visual) with overlay
 
 ---
 
-Design System
+## 9. Contact Page (`src/pages/Contact.tsx`)
 
-Colors
+### Hero
+- Background image with overlay (office / global connection visual)
 
-Background: White
-
-Text: Charcoal (#2D2D2D)
-
-Primary Accent: Deep Blue (#1B3A5C)
-
-Secondary: Muted Gray tones
-
-
-Typography
-
-Clean corporate hierarchy with large headings and clear spacing.
-
-Layout
-
-Section-based scrolling
-
-Generous whitespace
-
-Consistent CTA placement
-
-Premium minimal aesthetic
-
-
-Responsiveness
-
-Mobile-first design with hamburger navigation on smaller screens.
-
+No other changes needed -- the form and sidebar are already clean.
 
 ---
 
-Navigation
+## 10. Global CSS Enhancements (`src/index.css`)
 
-Sticky Top Navbar: Home
-About Us
-What We Do
-Programs
-Trainers
-Why Choose Us
-Contact
+Add smooth scrolling to the HTML element:
+```
+html { scroll-behavior: smooth; }
+```
 
-Mobile: Collapsible hamburger menu.
-
-Footer: Main navigation + legal links.
-
+Add a utility class for image overlays:
+```
+.hero-overlay {
+  @apply relative overflow-hidden;
+}
+.hero-overlay::before {
+  content: '';
+  @apply absolute inset-0 bg-primary/80 z-[1];
+}
+.hero-overlay > * {
+  @apply relative z-[2];
+}
+```
 
 ---
 
-This version keeps the original structure but adds:
+## Image Strategy
 
-Dynamic featured trainer logic
+All images will be sourced from Unsplash via direct URLs (`images.unsplash.com`) with size parameters for optimization (e.g., `?w=1920&q=80` for heroes, `?w=800&q=75` for section images).
 
-Corporate training enquiry pathway
+Image themes:
+| Location | Theme |
+|---|---|
+| Home hero | Executive conference / keynote |
+| Home CTA | Collaborative boardroom |
+| About hero | Diverse global professionals |
+| About vision | Mentorship / coaching |
+| What We Do hero | Workshop setting |
+| What We Do services | Classroom, virtual session, networking |
+| Programs hero | Learning environment |
+| Trainers hero | Professional team |
+| Why Choose Us hero | Corporate excellence |
+| Contact hero | Global connectivity |
 
-Request Details conversion CTA
+All images use `loading="lazy"` where rendered as `<img>` elements, or are applied as CSS backgrounds for hero sections.
 
-Trainer rotation support
+---
 
-Program lifecycle status
+## Technical Summary
+
+| Change | Type |
+|---|---|
+| `src/lib/animations.ts` | New file -- shared animation variants |
+| `src/components/layout/ScrollToTop.tsx` | New file -- scroll-to-top on navigation |
+| `src/App.tsx` | Edit -- add ScrollToTop component |
+| `src/index.css` | Edit -- smooth scrolling + overlay utility |
+| `src/pages/Index.tsx` | Edit -- hero image, card hover animations, CTA image |
+| `src/pages/About.tsx` | Edit -- hero image, vision section image |
+| `src/pages/WhatWeDo.tsx` | Edit -- hero image, service section images |
+| `src/pages/Programs.tsx` | Edit -- hero image, card hover effects |
+| `src/pages/Trainers.tsx` | Edit -- hero image, card hover effects |
+| `src/pages/WhyChooseUs.tsx` | Edit -- hero image, card hover, CTA image |
+| `src/pages/Contact.tsx` | Edit -- hero image |
+
+No new dependencies required. Framer Motion is already installed and used throughout.
+
