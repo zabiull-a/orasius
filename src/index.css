@@ -90,7 +90,23 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
   }
+}
+
+.hero-overlay {
+  @apply relative overflow-hidden;
+}
+.hero-overlay::before {
+  content: '';
+  @apply absolute inset-0 z-[1];
+  background: hsl(var(--primary) / 0.82);
+}
+.hero-overlay > * {
+  @apply relative z-[2];
 }

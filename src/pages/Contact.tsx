@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import Layout from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import heroContact from "@/assets/hero-contact.jpg";
 
 const contactSchema = z.object({
   fullName: z.string().trim().min(1, "Full name is required").max(100),
@@ -57,8 +58,12 @@ const Contact = () => {
 
   return (
     <Layout>
-      <section className="bg-primary py-20 md:py-28">
-        <div className="container">
+      <section
+        className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroContact})` }}
+      >
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="container relative z-10">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground">Contact Us</h1>
             <p className="mt-4 text-primary-foreground/80 text-lg max-w-2xl">

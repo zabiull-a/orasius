@@ -6,13 +6,8 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { programs, programCategories } from "@/data/programs";
 import { cn } from "@/lib/utils";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 },
-  }),
-};
+import { fadeUp, cardHover } from "@/lib/animations";
+import heroPrograms from "@/assets/hero-programs.jpg";
 
 const ProgramDetail = ({ programId }: { programId: string }) => {
   const program = programs.find((p) => p.id === programId);
@@ -20,8 +15,12 @@ const ProgramDetail = ({ programId }: { programId: string }) => {
 
   return (
     <Layout>
-      <section className="bg-primary py-16 md:py-24">
-        <div className="container">
+      <section
+        className="relative overflow-hidden py-16 md:py-24 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroPrograms})` }}
+      >
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="container relative z-10">
           <Link to="/programs" className="inline-flex items-center gap-1 text-primary-foreground/70 hover:text-primary-foreground text-sm mb-4 transition-colors">
             <ArrowLeft className="h-4 w-4" /> Back to Programs
           </Link>
@@ -95,8 +94,12 @@ const Programs = () => {
 
   return (
     <Layout>
-      <section className="bg-primary py-20 md:py-28">
-        <div className="container">
+      <section
+        className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroPrograms})` }}
+      >
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="container relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             className="font-display text-4xl md:text-5xl font-bold text-primary-foreground"
@@ -142,10 +145,11 @@ const Programs = () => {
               <motion.div
                 key={p.id}
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}
+                whileHover={cardHover.whileHover}
               >
                 <Link
                   to={`/programs/${p.id}`}
-                  className="block h-full p-6 rounded-lg border border-border bg-background hover:shadow-md hover:border-primary/30 transition-all"
+                  className="block h-full p-6 rounded-lg border border-border bg-background hover:border-primary/30 transition-all"
                 >
                   <span className="text-xs font-medium text-primary bg-accent px-2.5 py-1 rounded-full">
                     {p.category}

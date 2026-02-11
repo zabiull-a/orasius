@@ -19,15 +19,9 @@ import {
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { trainers } from "@/data/trainers";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.5 },
-  }),
-};
+import { fadeUp, cardHover, scaleHover } from "@/lib/animations";
+import heroHome from "@/assets/hero-home.jpg";
+import ctaBoardroom from "@/assets/cta-boardroom.jpg";
 
 const focusAreas = [
   { icon: Briefcase, label: "Business & Leadership" },
@@ -53,8 +47,12 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-primary py-24 md:py-36">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(210_52%_30%)_0%,_transparent_60%)]" />
+      <section
+        className="relative overflow-hidden py-24 md:py-36 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroHome})` }}
+      >
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(210_52%_30%/0.4)_0%,_transparent_60%)]" />
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 32 }}
@@ -135,7 +133,8 @@ const Index = () => {
                 viewport={{ once: true }}
                 variants={fadeUp}
                 custom={i}
-                className="flex flex-col items-center text-center p-6 rounded-lg bg-background border border-border hover:shadow-md transition-shadow"
+                whileHover={cardHover.whileHover}
+                className="flex flex-col items-center text-center p-6 rounded-lg bg-background border border-border transition-shadow"
               >
                 <area.icon className="h-8 w-8 text-primary mb-4" />
                 <span className="text-sm font-medium text-foreground">
@@ -169,7 +168,8 @@ const Index = () => {
                 viewport={{ once: true }}
                 variants={fadeUp}
                 custom={i}
-                className="text-center"
+                whileHover={cardHover.whileHover}
+                className="text-center p-4 rounded-lg transition-shadow"
               >
                 <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-accent">
                   <item.icon className="h-6 w-6 text-primary" />
@@ -213,7 +213,8 @@ const Index = () => {
                 viewport={{ once: true }}
                 variants={fadeUp}
                 custom={i}
-                className="bg-background rounded-lg border border-border p-6 text-center hover:shadow-md transition-shadow"
+                whileHover={scaleHover.whileHover}
+                className="bg-background rounded-lg border border-border p-6 text-center transition-shadow"
               >
                 <div className="mx-auto mb-4 h-24 w-24 rounded-full bg-accent flex items-center justify-center">
                   <Users className="h-10 w-10 text-primary/40" />
@@ -236,20 +237,24 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28">
-        <div className="container text-center max-w-2xl">
-          <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground">
+      <section
+        className="relative py-20 md:py-28 bg-cover bg-center"
+        style={{ backgroundImage: `url(${ctaBoardroom})` }}
+      >
+        <div className="absolute inset-0 bg-primary/90" />
+        <div className="container relative z-10 text-center max-w-2xl">
+          <h2 className="font-display text-3xl md:text-4xl font-semibold text-primary-foreground">
             Ready to Elevate Your Team?
           </h2>
-          <p className="mt-4 text-muted-foreground text-lg">
+          <p className="mt-4 text-primary-foreground/80 text-lg">
             Explore our programs or get in touch to discuss customized training
             solutions for your organization.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
               <Link to="/programs">Explore Programs</Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
