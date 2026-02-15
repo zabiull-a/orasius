@@ -96,7 +96,7 @@ const Index = () => {
               Who We Are
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
-              IELENT is a global training and professional development platform
+              ORASIUS is a global training and professional development platform
               delivering industry-aligned learning solutions for individuals and
               organizations across regions. Our programs combine real-world
               insights with hands-on application to support capability building
@@ -157,7 +157,7 @@ const Index = () => {
             custom={0}
             className="font-display text-3xl md:text-4xl font-semibold text-center mb-14"
           >
-            Why Choose IELENT
+            Why Choose ORASIUS
           </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChoose.map((item, i) => (

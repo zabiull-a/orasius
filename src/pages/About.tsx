@@ -59,7 +59,7 @@ const About = () => {
                   Our vision is to become a trusted global partner in professional learning by shaping skills that matter for the future of work. We aim to create lasting impact by bridging the gap between knowledge and real-world application, empowering individuals to grow with confidence and organizations to perform with agility in an ever-changing business environment.
                 </p>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Over the long term, we see IELENT evolving into a globally connected training ecosystem — collaborating with industry experts, institutions, and organizations across regions to deliver accessible and outcome-driven learning solutions.
+                  Over the long term, we see ORASIUS evolving into a globally connected training ecosystem — collaborating with industry experts, institutions, and organizations across regions to deliver accessible and outcome-driven learning solutions.
                 </p>
               </div>
 

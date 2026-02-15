@@ -10,7 +10,7 @@ const Ethics = () => (
     <section className="py-16 md:py-24">
       <div className="container max-w-3xl">
         <p className="text-lg text-muted-foreground leading-relaxed">
-          IELENT operates with a global outlook and is committed to ethical practices, data protection, quality assurance, and transparent communication. We continuously work to earn and maintain the trust of our learners, clients, and partners worldwide.
+          ORASIUS operates with a global outlook and is committed to ethical practices, data protection, quality assurance, and transparent communication. We continuously work to earn and maintain the trust of our learners, clients, and partners worldwide.
         </p>
         <h2 className="font-display text-xl font-semibold text-foreground mt-10 mb-3">Data Protection</h2>
         <p className="text-muted-foreground leading-relaxed">
