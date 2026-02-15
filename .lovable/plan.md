@@ -1,189 +1,97 @@
 
 
-# Visual Enhancement: Images and Animations
+# Production-Readiness Update: Complete Rebrand + Color System + Logo
 
 ## Overview
 
-Upgrade the IELENT website with professional Unsplash imagery and refined Framer Motion animations across all pages. All changes extend existing components -- no layout or routing rewrites.
+Apply all branding, color, logo, metadata, and cleanup changes in one pass. No layout changes.
 
 ---
 
-## 1. Shared Animation Utilities
+## 1. Logo Integration
 
-**File: `src/lib/animations.ts` (new)**
-
-Create a centralized animation variants file to eliminate the duplicated `fadeUp` definition across 7+ page files.
-
-Variants to include:
-- `fadeUp` -- staggered fade + translateY (existing, centralized)
-- `fadeIn` -- simple opacity fade
-- `scaleOnHover` -- `whileHover` config for cards (scale 1.02, subtle shadow)
-- `staggerContainer` -- parent variant with `staggerChildren` for grid layouts
-
-All pages will import from this single file instead of redefining locally.
+- Copy uploaded logo (`user-uploads://IMG_20260215_142916.png`) to `src/assets/orasius-logo.png`
+- Copy to `public/favicon.png` for favicon use
+- Replace text-only brand in **Navbar** and **Footer** with `<img>` tag using the logo
+  - Alt text: "ORASIUS Corporate Training & Professional Development"
+  - Navbar: height ~40px, auto width
+  - Footer: height ~36px, auto width
+- Update `index.html` to reference `/favicon.png`
 
 ---
 
-## 2. Smooth Scroll-to-Top on Navigation
+## 2. Brand Rename: IELENT -> ORASIUS
 
-**File: `src/components/layout/ScrollToTop.tsx` (new)**
+All text replacements (16 instances across 9 files):
 
-A small component using `useLocation` + `useEffect` to scroll to top with `window.scrollTo({ top: 0, behavior: 'smooth' })` on route change.
-
-**File: `src/App.tsx` (edit)**
-
-Add `<ScrollToTop />` inside `<BrowserRouter>`.
-
----
-
-## 3. Home Page (`src/pages/Index.tsx`)
-
-### Hero Background Image
-- Replace the solid `bg-primary` with an Unsplash corporate training image as a CSS background
-- Add a dark overlay (`bg-primary/85`) for text readability
-- Image: business conference / executive presentation theme
-- Use `bg-cover bg-center` with the image URL
-
-### Cards: Hover Micro-Interactions
-- Focus Area cards: add `whileHover={{ y: -4, boxShadow: "..." }}` via Framer Motion
-- Why Choose cards: same subtle lift effect
-- Trainer Spotlight cards: add scale(1.02) + shadow on hover
-
-### CTA Section
-- Add a subtle background image (muted boardroom / collaboration) with an overlay, replacing the plain white section
-
----
-
-## 4. About Page (`src/pages/About.tsx`)
-
-### Hero
-- Add background image (global professionals / diverse team) with dark overlay, matching the Home hero pattern
-
-### Vision & Mission Section
-- Add a side image alongside the text using a 2-column layout on desktop: text left, image right
-- Image: executive coaching / mentorship visual
-
----
-
-## 5. What We Do Page (`src/pages/WhatWeDo.tsx`)
-
-### Hero
-- Background image with overlay (workshop / training room setting)
-
-### Service Sections
-- Each of the 3 service blocks (Training Programs, Webinars, Professional Events) gets a relevant image on the right side of the existing 2-column grid
-- Images: classroom training, virtual meeting setup, networking event
-- Images use `rounded-lg overflow-hidden` with lazy loading
-
----
-
-## 6. Programs Page (`src/pages/Programs.tsx`)
-
-### Hero
-- Background image with overlay (professional development / learning environment)
-
-### Program Cards
-- Add `whileHover={{ y: -4 }}` and a smooth shadow transition to each card
-- Add a small decorative image strip or gradient accent at the top of each card based on category
-
-### Program Detail View
-- Add a hero-style image banner below the header area relevant to the program category
-
----
-
-## 7. Trainers Page (`src/pages/Trainers.tsx`)
-
-### Hero
-- Background image (diverse professionals in a corporate setting)
-
-### Trainer Cards
-- Add hover lift animation (`whileHover={{ y: -6, transition: { duration: 0.2 } }}`)
-- The existing placeholder avatar circles remain -- they will be replaced when real trainer photos are provided
-
----
-
-## 8. Why Choose Us Page (`src/pages/WhyChooseUs.tsx`)
-
-### Hero
-- Background image with overlay
-
-### Differentiator Cards
-- Add hover lift + shadow micro-interaction
-
-### Partner CTA Section
-- Add a subtle background image (handshake / partnership visual) with overlay
-
----
-
-## 9. Contact Page (`src/pages/Contact.tsx`)
-
-### Hero
-- Background image with overlay (office / global connection visual)
-
-No other changes needed -- the form and sidebar are already clean.
-
----
-
-## 10. Global CSS Enhancements (`src/index.css`)
-
-Add smooth scrolling to the HTML element:
-```
-html { scroll-behavior: smooth; }
-```
-
-Add a utility class for image overlays:
-```
-.hero-overlay {
-  @apply relative overflow-hidden;
-}
-.hero-overlay::before {
-  content: '';
-  @apply absolute inset-0 bg-primary/80 z-[1];
-}
-.hero-overlay > * {
-  @apply relative z-[2];
-}
-```
-
----
-
-## Image Strategy
-
-All images will be sourced from Unsplash via direct URLs (`images.unsplash.com`) with size parameters for optimization (e.g., `?w=1920&q=80` for heroes, `?w=800&q=75` for section images).
-
-Image themes:
-| Location | Theme |
+| File | Change |
 |---|---|
-| Home hero | Executive conference / keynote |
-| Home CTA | Collaborative boardroom |
-| About hero | Diverse global professionals |
-| About vision | Mentorship / coaching |
-| What We Do hero | Workshop setting |
-| What We Do services | Classroom, virtual session, networking |
-| Programs hero | Learning environment |
-| Trainers hero | Professional team |
-| Why Choose Us hero | Corporate excellence |
-| Contact hero | Global connectivity |
-
-All images use `loading="lazy"` where rendered as `<img>` elements, or are applied as CSS backgrounds for hero sections.
+| `src/pages/Index.tsx` (line 99) | "IELENT is a global..." -> "ORASIUS is a global..." |
+| `src/pages/Index.tsx` (line 160) | "Why Choose IELENT" -> "Why Choose ORASIUS" |
+| `src/pages/About.tsx` (line 62) | "we see IELENT evolving" -> "we see ORASIUS evolving" |
+| `src/pages/Contact.tsx` (lines 148, 155) | "info@ielent.com" -> "info@orasius.com", "IELENT" -> "ORASIUS" |
+| `src/pages/Terms.tsx` (lines 13, 18, 20, 22, 24) | All "IELENT" -> "ORASIUS", email -> "info@orasius.com" |
+| `src/pages/CodeOfConduct.tsx` (line 13) | "IELENT reserves" -> "ORASIUS reserves" |
+| `src/pages/Ethics.tsx` (line 10) | "IELENT operates" -> "ORASIUS operates" |
+| `src/components/layout/Footer.tsx` (lines 10, 18, 59, 67) | Brand name + email -> ORASIUS / info@orasius.com |
 
 ---
 
-## Technical Summary
+## 3. SEO & Metadata (`index.html`)
 
-| Change | Type |
+- Title: "ORASIUS | Global Training & Professional Development"
+- Meta description: "ORASIUS delivers industry-aligned training and professional development solutions for individuals and organizations worldwide."
+- og:title and og:description: same as above
+- Author: "ORASIUS"
+- Remove all TODO comments
+- Remove twitter @Lovable reference
+- Add favicon link: `<link rel="icon" href="/favicon.png" type="image/png">`
+
+---
+
+## 4. Brand Color System
+
+Update CSS custom properties in `src/index.css` to use the new palette:
+
+- **Primary (#0056B3)**: `--primary: 210 100% 35%` (HSL equivalent of #0056B3)
+- **Accent (#00A8E8)**: `--accent: 197 100% 45%` (HSL equivalent of #00A8E8)
+- **White (#FFFFFF)**: already the background
+
+Derived updates:
+- `--ring`: match new primary
+- `--accent-foreground`: dark text on cyan accent for contrast
+- `--sidebar-primary`: match new primary
+- Dark mode variants adjusted proportionally
+
+Button hover states will automatically darken via the existing Tailwind utilities since they reference `hsl(var(--primary))`.
+
+---
+
+## 5. Code Cleanup
+
+- **NotFound.tsx**: Remove `console.error` line and the `useLocation`/`useEffect` imports
+- **Delete** `src/components/NavLink.tsx` (unused, imported nowhere)
+
+---
+
+## Files Changed Summary
+
+| File | Action |
 |---|---|
-| `src/lib/animations.ts` | New file -- shared animation variants |
-| `src/components/layout/ScrollToTop.tsx` | New file -- scroll-to-top on navigation |
-| `src/App.tsx` | Edit -- add ScrollToTop component |
-| `src/index.css` | Edit -- smooth scrolling + overlay utility |
-| `src/pages/Index.tsx` | Edit -- hero image, card hover animations, CTA image |
-| `src/pages/About.tsx` | Edit -- hero image, vision section image |
-| `src/pages/WhatWeDo.tsx` | Edit -- hero image, service section images |
-| `src/pages/Programs.tsx` | Edit -- hero image, card hover effects |
-| `src/pages/Trainers.tsx` | Edit -- hero image, card hover effects |
-| `src/pages/WhyChooseUs.tsx` | Edit -- hero image, card hover, CTA image |
-| `src/pages/Contact.tsx` | Edit -- hero image |
+| `src/assets/orasius-logo.png` | New (copy from upload) |
+| `public/favicon.png` | New (copy from upload) |
+| `index.html` | Update metadata, add favicon |
+| `src/index.css` | Update CSS custom properties for new color palette |
+| `src/components/layout/Navbar.tsx` | Replace text brand with logo image |
+| `src/components/layout/Footer.tsx` | Replace text brand with logo, update email |
+| `src/pages/Index.tsx` | IELENT -> ORASIUS (2 instances) |
+| `src/pages/About.tsx` | IELENT -> ORASIUS (1 instance) |
+| `src/pages/Contact.tsx` | IELENT -> ORASIUS + email (2 instances) |
+| `src/pages/Terms.tsx` | IELENT -> ORASIUS + email (5 instances) |
+| `src/pages/CodeOfConduct.tsx` | IELENT -> ORASIUS (1 instance) |
+| `src/pages/Ethics.tsx` | IELENT -> ORASIUS (1 instance) |
+| `src/pages/NotFound.tsx` | Remove console.error |
+| `src/components/NavLink.tsx` | Delete |
 
-No new dependencies required. Framer Motion is already installed and used throughout.
+No layout, routing, or design structure changes.
 
