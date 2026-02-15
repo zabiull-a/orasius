@@ -143,12 +143,12 @@ const Contact = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <Mail className="h-4 w-4 mt-0.5 text-primary" />
-                    <span>info@ielent.com</span>
+                    <span>info@orasius.com</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <MapPin className="h-4 w-4 mt-0.5 text-primary" />
                     <div>
-                      <p>IELENT</p>
+                      <p>ORASIUS</p>
                       <p>Office Address Line 1</p>
                       <p>City, State, Country – ZIP</p>
                     </div>

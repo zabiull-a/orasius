@@ -13,7 +13,7 @@ const CodeOfConduct = () => (
           We are committed to maintaining a respectful, inclusive, and professional learning environment. All participants, trainers, speakers, and partners are expected to act with integrity, respect diverse perspectives, and engage constructively.
         </p>
         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-          Harassment, discrimination, disruptive behavior, or unethical conduct will not be tolerated. IELENT reserves the right to take appropriate action in response to any violations of this code, including removal from programs or events.
+          Harassment, discrimination, disruptive behavior, or unethical conduct will not be tolerated. ORASIUS reserves the right to take appropriate action in response to any violations of this code, including removal from programs or events.
         </p>
       </div>
     </section>
