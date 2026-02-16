@@ -22,11 +22,11 @@ const WhyChooseUs = () => {
         className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroWhyChoose})` }}
       >
-        <div className="absolute inset-0 bg-primary/85" />
+        <div className="absolute inset-0 bg-primary/90" />
         <div className="container relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="font-display text-4xl md:text-5xl font-bold text-primary-foreground"
+            className="font-display text-4xl md:text-5xl font-bold text-primary-foreground uppercase tracking-wide"
           >
             Why Choose Us
           </motion.h1>
@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
                 whileHover={cardHover.whileHover}
                 className="p-6 rounded-lg bg-background border border-border transition-shadow"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-md bg-secondary mb-4">
                   <d.icon className="h-5 w-5 text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">{d.title}</h3>
@@ -81,7 +81,7 @@ const WhyChooseUs = () => {
         className="relative py-20 bg-cover bg-center"
         style={{ backgroundImage: `url(${ctaPartnership})` }}
       >
-        <div className="absolute inset-0 bg-primary/90" />
+        <div className="absolute inset-0 bg-primary/92" />
         <div className="container relative z-10 text-center max-w-2xl">
           <h2 className="font-display text-3xl font-semibold text-primary-foreground">Partner With Us</h2>
           <p className="mt-4 text-primary-foreground/80">

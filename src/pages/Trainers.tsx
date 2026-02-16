@@ -12,10 +12,10 @@ const Trainers = () => {
         className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroTrainers})` }}
       >
-        <div className="absolute inset-0 bg-primary/85" />
+        <div className="absolute inset-0 bg-primary/90" />
         <div className="container relative z-10">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground">Our Trainers</h1>
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground uppercase tracking-wide">Our Trainers</h1>
             <p className="mt-4 text-primary-foreground/80 text-lg max-w-2xl">
               Our programs are designed and delivered by seasoned professionals with extensive international experience across industries and regions.
             </p>
@@ -35,7 +35,7 @@ const Trainers = () => {
                   whileHover={{ y: -6, transition: { duration: 0.2 } }}
                   className="rounded-lg border border-border bg-background p-8 text-center hover:shadow-lg transition-shadow"
                 >
-                  <div className="mx-auto mb-6 h-28 w-28 rounded-full bg-accent flex items-center justify-center">
+                  <div className="mx-auto mb-6 h-28 w-28 rounded-full bg-secondary flex items-center justify-center">
                     <Users className="h-12 w-12 text-primary/40" />
                   </div>
                   <h3 className="font-display text-xl font-semibold text-foreground">{trainer.name}</h3>
