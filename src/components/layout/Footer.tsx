@@ -3,7 +3,7 @@ import orasiusLogo from "@/assets/orasius-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-primary text-primary-foreground">
+    <footer className="bg-primary text-primary-foreground">
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
@@ -13,7 +13,7 @@ const Footer = () => {
               alt="ORASIUS Corporate Training & Professional Development"
               className="h-9 w-auto brightness-0 invert"
             />
-            <p className="mt-3 text-sm text-primary-foreground/70 leading-relaxed">
+            <p className="mt-3 text-sm text-primary-foreground/60 leading-relaxed">
               Global training and professional development for future-ready
               professionals and organizations.
             </p>
@@ -35,7 +35,7 @@ const Footer = () => {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -49,7 +49,7 @@ const Footer = () => {
             <h4 className="font-semibold text-sm uppercase tracking-wider mb-4">
               Contact
             </h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
+            <ul className="space-y-2 text-sm text-primary-foreground/60">
               <li>Phone: +XX XXXX XXXX</li>
               <li>Email: info@orasius.com</li>
               <li>Office Address Line 1</li>
@@ -71,7 +71,7 @@ const Footer = () => {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -81,7 +81,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-primary-foreground/10 text-center text-xs text-primary-foreground/50">
+        <div className="mt-12 pt-8 border-t border-primary-foreground/10 text-center text-xs text-primary-foreground/40">
           © {new Date().getFullYear()} ORASIUS. All rights reserved.
         </div>
       </div>

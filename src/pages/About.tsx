@@ -21,13 +21,13 @@ const About = () => {
         className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroAbout})` }}
       >
-        <div className="absolute inset-0 bg-primary/85" />
+        <div className="absolute inset-0 bg-primary/90" />
         <div className="container relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-display text-4xl md:text-5xl font-bold text-primary-foreground"
+            className="font-display text-4xl md:text-5xl font-bold text-primary-foreground uppercase tracking-wide"
           >
             About Us
           </motion.h1>
@@ -95,7 +95,7 @@ const About = () => {
         <div className="container">
           <motion.h2
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}
-            className="font-display text-3xl md:text-4xl font-semibold text-center mb-14"
+            className="font-display text-3xl md:text-4xl font-bold text-center mb-14 uppercase tracking-wide"
           >
             Our Core Values
           </motion.h2>
@@ -107,7 +107,7 @@ const About = () => {
                 whileHover={cardHover.whileHover}
                 className="text-center p-6 rounded-lg border border-border bg-background transition-shadow"
               >
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent">
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-md bg-secondary">
                   <v.icon className="h-5 w-5 text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">{v.title}</h3>

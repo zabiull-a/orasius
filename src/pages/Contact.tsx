@@ -62,10 +62,10 @@ const Contact = () => {
         className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroContact})` }}
       >
-        <div className="absolute inset-0 bg-primary/85" />
+        <div className="absolute inset-0 bg-primary/90" />
         <div className="container relative z-10">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground">Contact Us</h1>
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground uppercase tracking-wide">Contact Us</h1>
             <p className="mt-4 text-primary-foreground/80 text-lg max-w-2xl">
               We'd love to hear from you
             </p>
