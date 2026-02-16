@@ -11,7 +11,7 @@ const Footer = () => {
             <img
               src={orasiusLogo}
               alt="ORASIUS Corporate Training & Professional Development"
-              className="h-9 w-auto brightness-0 invert"
+              className="h-12 w-auto brightness-0 invert"
             />
             <p className="mt-3 text-sm text-primary-foreground/60 leading-relaxed">
               Global training and professional development for future-ready
