@@ -20,14 +20,22 @@ const Navbar = () => {
   const { pathname } = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground">
-      <div className="container flex items-center justify-between py-2">
-        <Link to="/" className="flex-shrink-0 flex items-center gap-2">
+    <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground overflow-visible">
+      <div className="container flex items-center justify-between min-h-[64px] md:min-h-[72px] lg:min-h-[80px] py-2 overflow-visible">
+        <Link to="/" className="flex items-center gap-2" style={{ flexShrink: 0, flexGrow: 0 }}>
           <img
             src={orasiusLogo}
             alt="ORASIUS Corporate Training & Professional Development"
-            className="h-[36px] md:h-[44px] lg:h-[52px] w-auto min-w-[120px] object-contain brightness-0 invert"
-            style={{ imageRendering: 'auto' }}
+            className="navbar-logo brightness-0 invert"
+            style={{
+              height: '40px',
+              width: 'auto',
+              aspectRatio: 'auto',
+              objectFit: 'contain',
+              maxHeight: 'none',
+              maxWidth: 'none',
+              minHeight: '40px',
+            }}
           />
         </Link>
 

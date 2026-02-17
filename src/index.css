@@ -99,6 +99,24 @@
   }
 }
 
+/* Navbar logo responsive sizing */
+.navbar-logo {
+  height: 40px !important;
+  width: auto !important;
+  max-height: none !important;
+  max-width: none !important;
+}
+@media (min-width: 768px) {
+  .navbar-logo {
+    height: 48px !important;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar-logo {
+    height: 60px !important;
+  }
+}
+
 .hero-overlay {
   @apply relative overflow-hidden;
 }
