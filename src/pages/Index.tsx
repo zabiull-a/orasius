@@ -190,51 +190,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Trainer Spotlight */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            custom={0}
-            className="font-display text-3xl md:text-4xl font-bold text-center mb-14 uppercase tracking-wide"
-          >
-            Trainer Spotlight
-          </motion.h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {featuredTrainers.map((trainer, i) => (
-              <motion.div
-                key={trainer.id}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                custom={i}
-                whileHover={scaleHover.whileHover}
-                className="bg-card rounded-md border border-border p-6 text-center transition-shadow"
-              >
-                <div className="mx-auto mb-4 h-24 w-24 rounded-full bg-secondary flex items-center justify-center">
-                  <Users className="h-10 w-10 text-primary/40" />
-                </div>
-                <h3 className="font-semibold text-foreground">{trainer.name}</h3>
-                <p className="text-sm text-primary mt-1">{trainer.expertise}</p>
-                <div className="flex items-center justify-center gap-1 mt-2 text-xs text-muted-foreground">
-                  <MapPin className="h-3 w-3" />
-                  {trainer.regionsWorked.slice(0, 2).join(", ")}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Button asChild className="font-semibold">
-              <Link to="/trainers">View All Trainers</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section
         className="relative py-20 md:py-28 bg-cover bg-center"
