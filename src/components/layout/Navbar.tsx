@@ -21,12 +21,13 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground">
-      <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
+      <div className="container flex items-center justify-between py-2">
+        <Link to="/" className="flex-shrink-0 flex items-center gap-2">
           <img
             src={orasiusLogo}
             alt="ORASIUS Corporate Training & Professional Development"
-            className="h-14 w-auto brightness-0 invert"
+            className="h-[36px] md:h-[44px] lg:h-[52px] w-auto min-w-[120px] object-contain brightness-0 invert"
+            style={{ imageRendering: 'auto' }}
           />
         </Link>
 
