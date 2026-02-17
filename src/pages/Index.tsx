@@ -20,14 +20,14 @@ import Layout from "@/components/layout/Layout";
 import { fadeUp, cardHover } from "@/lib/animations";
 import heroHome from "@/assets/hero-home.jpg";
 import ctaBoardroom from "@/assets/cta-boardroom.jpg";
-import focusBusiness from "@/assets/focus-business.jpg";
-import focusHr from "@/assets/focus-hr.jpg";
-import focusTechnology from "@/assets/focus-technology.jpg";
-import focusFinance from "@/assets/focus-finance.jpg";
-import focusSupply from "@/assets/focus-supply.jpg";
-import focusSafety from "@/assets/focus-safety.jpg";
-import focusRisk from "@/assets/focus-risk.jpg";
-import focusDevelopment from "@/assets/focus-development.jpg";
+import focusBusiness from "@/assets/focus-business.webp";
+import focusHr from "@/assets/focus-hr.webp";
+import focusTechnology from "@/assets/focus-technology.webp";
+import focusFinance from "@/assets/focus-finance.webp";
+import focusSupply from "@/assets/focus-supply.webp";
+import focusSafety from "@/assets/focus-safety.webp";
+import focusRisk from "@/assets/focus-risk.webp";
+import focusDevelopment from "@/assets/focus-development.webp";
 
 const focusAreas = [
   { icon: Briefcase, label: "Business & Leadership", image: focusBusiness },
