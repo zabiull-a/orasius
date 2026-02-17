@@ -13,25 +13,31 @@ import {
   Award,
   Target,
   Heart,
-  MapPin,
   ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
-import { trainers } from "@/data/trainers";
-import { fadeUp, cardHover, scaleHover } from "@/lib/animations";
+import { fadeUp, cardHover } from "@/lib/animations";
 import heroHome from "@/assets/hero-home.jpg";
 import ctaBoardroom from "@/assets/cta-boardroom.jpg";
+import focusBusiness from "@/assets/focus-business.jpg";
+import focusHr from "@/assets/focus-hr.jpg";
+import focusTechnology from "@/assets/focus-technology.jpg";
+import focusFinance from "@/assets/focus-finance.jpg";
+import focusSupply from "@/assets/focus-supply.jpg";
+import focusSafety from "@/assets/focus-safety.jpg";
+import focusRisk from "@/assets/focus-risk.jpg";
+import focusDevelopment from "@/assets/focus-development.jpg";
 
 const focusAreas = [
-  { icon: Briefcase, label: "Business & Leadership" },
-  { icon: Users, label: "Human Resource Management" },
-  { icon: Monitor, label: "Technology" },
-  { icon: DollarSign, label: "Finance" },
-  { icon: Truck, label: "Supply Chain" },
-  { icon: ShieldCheck, label: "Health & Safety" },
-  { icon: AlertTriangle, label: "Risk Management" },
-  { icon: GraduationCap, label: "Professional Development" },
+  { icon: Briefcase, label: "Business & Leadership", image: focusBusiness },
+  { icon: Users, label: "Human Resource Management", image: focusHr },
+  { icon: Monitor, label: "Technology", image: focusTechnology },
+  { icon: DollarSign, label: "Finance", image: focusFinance },
+  { icon: Truck, label: "Supply Chain", image: focusSupply },
+  { icon: ShieldCheck, label: "Health & Safety", image: focusSafety },
+  { icon: AlertTriangle, label: "Risk Management", image: focusRisk },
+  { icon: GraduationCap, label: "Professional Development", image: focusDevelopment },
 ];
 
 const whyChoose = [
@@ -41,7 +47,7 @@ const whyChoose = [
   { icon: Heart, title: "Ethical & Transparent Approach", desc: "A culture built on integrity, accountability, and transparent communication at every level." },
 ];
 
-const featuredTrainers = trainers.filter((t) => t.featured && t.status === "Active");
+
 
 const Index = () => {
   return (
@@ -132,13 +138,25 @@ const Index = () => {
                 viewport={{ once: true }}
                 variants={fadeUp}
                 custom={i}
-                whileHover={cardHover.whileHover}
-                className="flex flex-col items-center text-center p-6 rounded-md bg-card border border-border transition-shadow"
+                whileHover={{ scale: 1.03, transition: { duration: 0.25 } }}
+                className="group relative flex flex-col items-center justify-center text-center p-6 rounded-md overflow-hidden min-h-[160px] cursor-default"
               >
-                <area.icon className="h-8 w-8 text-primary mb-4" />
-                <span className="text-sm font-semibold text-foreground">
-                  {area.label}
-                </span>
+                {/* Background image */}
+                <img
+                  src={area.image}
+                  alt=""
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-300 blur-[2px] group-hover:blur-[1px] group-hover:brightness-110 md:opacity-100 opacity-80"
+                />
+                {/* Dark gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/35 transition-opacity duration-300" />
+                {/* Content */}
+                <div className="relative z-10 flex flex-col items-center">
+                  <area.icon className="h-8 w-8 text-white mb-4 drop-shadow-md" />
+                  <span className="text-sm font-semibold text-white drop-shadow-md">
+                    {area.label}
+                  </span>
+                </div>
               </motion.div>
             ))}
           </div>
