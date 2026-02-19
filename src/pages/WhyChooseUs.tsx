@@ -91,7 +91,7 @@ const WhyChooseUs = () => {
             <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
               <Link to="/programs">Explore Programs</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+            <Button asChild size="lg" variant="ghost" className="border border-primary-foreground/40 text-primary-foreground bg-transparent hover:bg-primary-foreground/10">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
