@@ -51,7 +51,6 @@ const Contact = () => {
       setErrors(fieldErrors);
       return;
     }
-    // In production, this would save to a database
     setSubmitted(true);
     toast({ title: "Message sent!", description: "We'll get back to you soon." });
   };
@@ -59,35 +58,35 @@ const Contact = () => {
   return (
     <Layout>
       <section
-        className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center"
+        className="relative overflow-hidden py-24 md:py-32 bg-cover bg-center parallax-bg"
         style={{ backgroundImage: `url(${heroContact})` }}
       >
         <div className="absolute inset-0 bg-primary/90" />
         <div className="container relative z-10">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground uppercase tracking-wide">Contact Us</h1>
-            <p className="mt-4 text-primary-foreground/80 text-lg max-w-2xl">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground uppercase tracking-wide premium-hero-title">Contact Us</h1>
+            <p className="mt-4 text-primary-foreground/80 text-lg md:text-xl premium-body">
               We'd love to hear from you
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Form */}
             <div className="lg:col-span-2">
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-muted-foreground mb-8 leading-relaxed premium-body">
                 We welcome inquiries from individuals, organizations, and partners across the globe. Whether you have questions about our programs, need customized training solutions, or would like to collaborate with us, our team is here to support you.
               </p>
 
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-16 text-center">
-                  <CheckCircle className="h-16 w-16 text-primary mb-4" />
+                  <CheckCircle className="h-20 w-20 text-primary mb-4" />
                   <h2 className="font-display text-2xl font-semibold text-foreground">Thank You!</h2>
-                  <p className="mt-2 text-muted-foreground">Your message has been received. We'll get back to you shortly.</p>
-                  <Button className="mt-6" onClick={() => { setSubmitted(false); setForm({ fullName: "", email: "", phone: "", organization: "", subject: "", message: "" }); }}>
+                  <p className="mt-2 text-muted-foreground premium-body">Your message has been received. We'll get back to you shortly.</p>
+                  <Button className="mt-6 px-8 py-3 text-base" onClick={() => { setSubmitted(false); setForm({ fullName: "", email: "", phone: "", organization: "", subject: "", message: "" }); }}>
                     Send Another Message
                   </Button>
                 </div>
@@ -125,7 +124,7 @@ const Contact = () => {
                     <Textarea id="message" rows={5} value={form.message} onChange={(e) => handleChange("message", e.target.value)} />
                     {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
                   </div>
-                  <Button type="submit" size="lg">
+                  <Button type="submit" size="lg" className="px-8 py-3 text-base">
                     <Send className="mr-2 h-4 w-4" /> Send Message
                   </Button>
                 </form>
@@ -134,19 +133,19 @@ const Contact = () => {
 
             {/* Sidebar */}
             <div className="space-y-6">
-              <div className="p-6 rounded-lg bg-secondary">
-                <h3 className="font-semibold text-foreground mb-4">Get in Touch</h3>
-                <ul className="space-y-4 text-sm text-muted-foreground">
+              <div className="p-8 rounded-lg bg-secondary">
+                <h3 className="font-semibold text-foreground mb-4 text-lg">Get in Touch</h3>
+                <ul className="space-y-4 text-sm md:text-base text-muted-foreground">
                   <li className="flex items-start gap-3">
-                    <Phone className="h-4 w-4 mt-0.5 text-primary" />
+                    <Phone className="h-5 w-5 mt-0.5 text-primary" />
                     <span>+XX XXXX XXXX</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Mail className="h-4 w-4 mt-0.5 text-primary" />
+                    <Mail className="h-5 w-5 mt-0.5 text-primary" />
                     <span>info@orasius.com</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <MapPin className="h-4 w-4 mt-0.5 text-primary" />
+                    <MapPin className="h-5 w-5 mt-0.5 text-primary" />
                     <div>
                       <p>ORASIUS</p>
                       <p>Office Address Line 1</p>

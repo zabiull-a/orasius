@@ -51,22 +51,22 @@ const WhatWeDo = () => {
   return (
     <Layout>
       <section
-        className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center"
+        className="relative overflow-hidden py-24 md:py-32 bg-cover bg-center parallax-bg"
         style={{ backgroundImage: `url(${heroWhatWeDo})` }}
       >
         <div className="absolute inset-0 bg-primary/90" />
         <div className="container relative z-10">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground uppercase tracking-wide">What We Do</h1>
-            <p className="mt-4 text-primary-foreground/80 text-lg max-w-2xl">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground uppercase tracking-wide premium-hero-title">What We Do</h1>
+            <p className="mt-4 text-primary-foreground/80 text-lg md:text-xl max-w-2xl premium-body">
               We deliver a wide range of learning and engagement formats designed to meet diverse professional and organizational needs.
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-20 md:py-28">
-        <div className="container space-y-20">
+      <section className="py-24 md:py-32">
+        <div className="container space-y-24">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
@@ -75,22 +75,22 @@ const WhatWeDo = () => {
             >
               <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-md bg-secondary">
-                    <s.icon className="h-6 w-6 text-primary" />
+                  <div className="flex h-14 w-14 items-center justify-center rounded-md bg-secondary">
+                    <s.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">{s.title}</h2>
+                  <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground premium-section-title">{s.title}</h2>
                 </div>
-                <p className="text-muted-foreground leading-relaxed text-lg">{s.desc}</p>
+                <p className="text-muted-foreground leading-relaxed text-lg premium-body">{s.desc}</p>
                 <div className="mt-6 space-y-6">
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Who It's For</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{s.audience}</p>
+                    <h3 className="font-semibold text-foreground mb-2 text-lg">Who It's For</h3>
+                    <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{s.audience}</p>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Learning Outcomes</h3>
+                    <h3 className="font-semibold text-foreground mb-2 text-lg">Learning Outcomes</h3>
                     <ul className="space-y-2">
                       {s.outcomes.map((o) => (
-                        <li key={o} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <li key={o} className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
                           <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
                           {o}
                         </li>
@@ -98,8 +98,8 @@ const WhatWeDo = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="mt-6">
-                  <Button asChild>
+                <div className="mt-8">
+                  <Button asChild className="px-8 py-3 text-base">
                     <Link to="/contact">
                       Enquire <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
