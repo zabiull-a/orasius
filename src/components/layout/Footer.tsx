@@ -50,10 +50,8 @@ const Footer = () => {
               Contact
             </h4>
             <ul className="space-y-2 text-sm text-primary-foreground/60">
-              <li>Phone: +XX XXXX XXXX</li>
+              <li>Phone: +1 786 2436792</li>
               <li>Email: info@orasius.com</li>
-              <li>Office Address Line 1</li>
-              <li>City, State, Country</li>
             </ul>
           </div>
 
