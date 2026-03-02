@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -138,19 +138,11 @@ const Contact = () => {
                 <ul className="space-y-4 text-sm md:text-base text-muted-foreground">
                   <li className="flex items-start gap-3">
                     <Phone className="h-5 w-5 mt-0.5 text-primary" />
-                    <span>+XX XXXX XXXX</span>
+                    <span>+1 786 2436792</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Mail className="h-5 w-5 mt-0.5 text-primary" />
                     <span>info@orasius.com</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <MapPin className="h-5 w-5 mt-0.5 text-primary" />
-                    <div>
-                      <p>ORASIUS</p>
-                      <p>Office Address Line 1</p>
-                      <p>City, State, Country – ZIP</p>
-                    </div>
                   </li>
                 </ul>
               </div>
