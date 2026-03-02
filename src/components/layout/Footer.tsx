@@ -29,7 +29,7 @@ const Footer = () => {
                 { label: "About Us", to: "/about" },
                 { label: "What We Do", to: "/what-we-do" },
                 { label: "Programs", to: "/programs" },
-                { label: "Trainers", to: "/trainers" },
+                
                 { label: "Why Choose Us", to: "/why-choose-us" },
               ].map((link) => (
                 <li key={link.to}>
