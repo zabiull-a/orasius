@@ -14,8 +14,7 @@ const Footer = () => {
               className="h-12 w-auto brightness-0 invert"
             />
             <p className="mt-3 text-sm text-primary-foreground/60 leading-relaxed">
-              Global training and professional development for future-ready
-              professionals and organizations.
+              Structured capability development for HR and operational leaders across the Caribbean.
             </p>
           </div>
 
@@ -26,11 +25,10 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-sm">
               {[
-                { label: "About Us", to: "/about" },
-                { label: "What We Do", to: "/what-we-do" },
                 { label: "Programs", to: "/programs" },
-                
-                { label: "Why Choose Us", to: "/why-choose-us" },
+                { label: "Methodology", to: "/methodology" },
+                { label: "About", to: "/about" },
+                { label: "Contact", to: "/contact" },
               ].map((link) => (
                 <li key={link.to}>
                   <Link
@@ -62,7 +60,10 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-sm">
               {[
+                { label: "Privacy Policy", to: "/privacy-policy" },
                 { label: "Terms & Conditions", to: "/terms" },
+                { label: "Data Security", to: "/data-security" },
+                { label: "Refund & Cancellation", to: "/refund-policy" },
                 { label: "Code of Conduct", to: "/code-of-conduct" },
                 { label: "Ethics & Compliance", to: "/ethics" },
               ].map((link) => (

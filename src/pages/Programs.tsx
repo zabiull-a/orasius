@@ -72,10 +72,10 @@ const ProgramDetail = ({ programId }: { programId: string }) => {
 
           <div className="flex flex-wrap gap-4">
             <Button asChild size="lg" className="px-8 py-3 text-base">
-              <Link to="/contact">Request Details</Link>
+              <Link to="/contact">Book Discovery Call</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="px-8 py-3 text-base">
-              <Link to="/contact">Register Interest</Link>
+              <Link to="/contact">Request Program Brochure</Link>
             </Button>
           </div>
         </div>
@@ -112,9 +112,9 @@ const Programs = () => {
       {/* Corporate CTA */}
       <section className="py-10 bg-accent">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-foreground font-medium text-lg">Looking for customized training for your organization?</p>
+          <p className="text-foreground font-medium text-lg">Looking for a tailored capability program for your organisation?</p>
           <Button asChild className="px-8 py-3 text-base">
-            <Link to="/contact">Enquire for Corporate Solutions <ArrowRight className="ml-1 h-4 w-4" /></Link>
+            <Link to="/contact">Book Discovery Call <ArrowRight className="ml-1 h-4 w-4" /></Link>
           </Button>
         </div>
       </section>

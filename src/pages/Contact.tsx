@@ -77,8 +77,8 @@ const Contact = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Form */}
             <div className="lg:col-span-2">
-              <p className="text-muted-foreground mb-8 leading-relaxed premium-body">
-                We welcome inquiries from individuals, organizations, and partners across the globe. Whether you have questions about our programs, need customized training solutions, or would like to collaborate with us, our team is here to support you.
+            <p className="text-muted-foreground mb-8 leading-relaxed premium-body">
+                We work with HR leaders, L&amp;D managers, and company executives to design capability development programs tailored to organisational needs. Use this form to book a discovery call, request a program brochure, or discuss corporate training requirements.
               </p>
 
               {submitted ? (
@@ -145,6 +145,11 @@ const Contact = () => {
                     <span>info@orasius.com</span>
                   </li>
                 </ul>
+              </div>
+              <div className="p-6 rounded-lg border border-border bg-background">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  We respond to all enquiries within <strong className="text-foreground">one business day</strong>. For urgent requests, please call us directly.
+                </p>
               </div>
             </div>
           </div>
