@@ -7,11 +7,9 @@ import orasiusLogo from "@/assets/orasius-logo.png";
 
 const navLinks = [
   { label: "Home", to: "/" },
-  { label: "About Us", to: "/about" },
-  { label: "What We Do", to: "/what-we-do" },
   { label: "Programs", to: "/programs" },
-  
-  { label: "Why Choose Us", to: "/why-choose-us" },
+  { label: "Methodology", to: "/methodology" },
+  { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -59,7 +57,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex">
           <Button asChild size="sm" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold">
-            <Link to="/contact">Get in Touch</Link>
+            <Link to="/contact">Book Discovery Call</Link>
           </Button>
         </div>
 
@@ -95,7 +93,7 @@ const Navbar = () => {
             <div className="pt-2">
               <Button asChild size="sm" className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold">
                 <Link to="/contact" onClick={() => setOpen(false)}>
-                  Get in Touch
+                  Book Discovery Call
                 </Link>
               </Button>
             </div>
