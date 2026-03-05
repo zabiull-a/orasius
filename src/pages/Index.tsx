@@ -100,13 +100,13 @@ const Index = () => {
             className="max-w-3xl"
           >
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-foreground uppercase tracking-wide premium-hero-title">
-              Developing Decision Capability in HR and Operational Leaders
+              Corporate Capability Development for Modern Organisations
             </h1>
             <p className="mt-6 text-lg md:text-xl text-primary-foreground/70 max-w-2xl leading-relaxed premium-body">
-              ORASIUS designs structured capability programs that improve
-              workplace judgement, influence, and operational leadership — built
-              for Caribbean organisations ready to strengthen their people and
-              performance.
+              ORASIUS designs structured training programs that strengthen
+              leadership, operational capability, professional judgement, and
+              organisational performance — supporting organisations globally
+              with current program delivery focused in the Caribbean.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button
