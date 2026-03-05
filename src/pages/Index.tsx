@@ -25,7 +25,7 @@ const programStructure = [
   {
     icon: UserCheck,
     title: "Target Participants",
-    desc: "HR Business Partners, operational managers, team leaders, and professionals responsible for people decisions and organisational performance.",
+    desc: "Managers, team leaders, HR professionals, emerging leaders, operational supervisors, and professional staff across corporate functions.",
   },
   {
     icon: Layers,
