@@ -43,7 +43,7 @@ const Methodology = () => {
               Our Methodology
             </h1>
             <p className="mt-4 text-primary-foreground/80 text-lg md:text-xl max-w-2xl premium-body">
-              A structured approach to developing judgement, influence, and operational leadership.
+              A structured approach to developing professional capability, judgement, and leadership across organisational roles.
             </p>
           </motion.div>
         </div>
