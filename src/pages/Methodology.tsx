@@ -53,10 +53,10 @@ const Methodology = () => {
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
             <p className="text-lg text-muted-foreground leading-relaxed premium-body">
-              Most corporate training fails because it transfers information without changing behaviour. Our methodology is designed differently — every element focuses on building the decision-making capability that leaders actually need.
+              Most corporate training fails because it transfers information without changing behaviour. Our methodology is designed differently — every element focuses on building the practical capability that professionals and leaders actually need.
             </p>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed premium-body">
-              We don't deliver lectures. We create structured learning environments where participants practise the thinking, communication, and judgement skills required to lead effectively in complex organisational settings.
+              We don't deliver lectures. We create structured learning environments where participants practise the thinking, communication, and professional skills required to perform effectively in complex organisational settings.
             </p>
           </motion.div>
         </div>
