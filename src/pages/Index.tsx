@@ -185,7 +185,7 @@ const Index = () => {
               Our Capability Development Methodology
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg premium-body">
-              We focus on developing judgement and decision-making — not just transferring information. Every element of our methodology is designed to create behaviour change that lasts beyond the classroom.
+              We focus on developing professional judgement and practical capability — not just transferring information. Every element of our methodology is designed to create behaviour change that lasts beyond the classroom.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
