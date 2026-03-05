@@ -52,12 +52,12 @@ const methodology = [
 ];
 
 const programExperience = [
-  "Analyse real workplace situations involving competing priorities and incomplete information",
-  "Practice stakeholder influence conversations with structured feedback",
-  "Respond to escalation scenarios that test composure and decision quality",
-  "Build decision justification frameworks that stand up to scrutiny",
-  "Navigate ambiguous organisational dynamics with confidence",
-  "Develop action plans grounded in operational reality",
+  "Leadership decision simulations that mirror real organisational complexity",
+  "Stakeholder communication scenarios with structured feedback",
+  "Operational problem-solving exercises involving competing priorities",
+  "Team collaboration challenges that develop coordination and influence",
+  "Managerial judgement exercises under time pressure and ambiguity",
+  "Action planning grounded in each participant's operational reality",
 ];
 
 const facilitators = [
