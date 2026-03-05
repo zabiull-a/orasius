@@ -43,7 +43,7 @@ const Methodology = () => {
               Our Methodology
             </h1>
             <p className="mt-4 text-primary-foreground/80 text-lg md:text-xl max-w-2xl premium-body">
-              A structured approach to developing judgement, influence, and operational leadership.
+              A structured approach to developing professional capability, judgement, and leadership across organisational roles.
             </p>
           </motion.div>
         </div>
@@ -53,10 +53,10 @@ const Methodology = () => {
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
             <p className="text-lg text-muted-foreground leading-relaxed premium-body">
-              Most corporate training fails because it transfers information without changing behaviour. Our methodology is designed differently — every element focuses on building the decision-making capability that leaders actually need.
+              Most corporate training fails because it transfers information without changing behaviour. Our methodology is designed differently — every element focuses on building the practical capability that professionals and leaders actually need.
             </p>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed premium-body">
-              We don't deliver lectures. We create structured learning environments where participants practise the thinking, communication, and judgement skills required to lead effectively in complex organisational settings.
+              We don't deliver lectures. We create structured learning environments where participants practise the thinking, communication, and professional skills required to perform effectively in complex organisational settings.
             </p>
           </motion.div>
         </div>
@@ -96,7 +96,7 @@ const Methodology = () => {
             See It in Action
           </h2>
           <p className="mt-4 text-muted-foreground text-lg premium-body">
-            Book a discovery call to learn how our methodology can be applied to your organisation's specific capability challenges.
+            Book a discovery call to learn how our methodology can be applied to your organisation's specific training and capability development needs.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="px-10 py-3 text-base">

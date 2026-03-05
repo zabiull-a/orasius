@@ -25,7 +25,7 @@ const programStructure = [
   {
     icon: UserCheck,
     title: "Target Participants",
-    desc: "HR Business Partners, operational managers, team leaders, and professionals responsible for people decisions and organisational performance.",
+    desc: "Managers, team leaders, HR professionals, emerging leaders, operational supervisors, and professional staff across corporate functions.",
   },
   {
     icon: Layers,
@@ -48,28 +48,28 @@ const methodology = [
   { icon: Compass, title: "Real Workplace Scenarios", desc: "Participants work through situations drawn from actual organisational challenges — not textbook theory." },
   { icon: Brain, title: "Decision-Based Simulations", desc: "Structured exercises that require participants to assess information, weigh trade-offs, and justify their decisions." },
   { icon: MessageSquare, title: "Facilitated Discussion & Analysis", desc: "Guided group analysis of complex situations, developing critical thinking and stakeholder awareness." },
-  { icon: ClipboardCheck, title: "Applied Exercises & Reflection", desc: "Practical tasks followed by structured reflection to embed learning and build lasting capability." },
+  { icon: ClipboardCheck, title: "Applied Exercises & Reflection", desc: "Practical tasks followed by structured reflection to embed learning and build lasting professional capability." },
 ];
 
 const programExperience = [
-  "Analyse real workplace situations involving competing priorities and incomplete information",
-  "Practice stakeholder influence conversations with structured feedback",
-  "Respond to escalation scenarios that test composure and decision quality",
-  "Build decision justification frameworks that stand up to scrutiny",
-  "Navigate ambiguous organisational dynamics with confidence",
-  "Develop action plans grounded in operational reality",
+  "Leadership decision simulations that mirror real organisational complexity",
+  "Stakeholder communication scenarios with structured feedback",
+  "Operational problem-solving exercises involving competing priorities",
+  "Team collaboration challenges that develop coordination and influence",
+  "Managerial judgement exercises under time pressure and ambiguity",
+  "Action planning grounded in each participant's operational reality",
 ];
 
 const facilitators = [
   {
     icon: Target,
-    title: "Leadership & Operational Decision-Making",
+    title: "Leadership & Operational Excellence",
     desc: "Facilitators with direct experience helping leaders improve decision quality, manage ambiguity, and lead through organisational complexity.",
   },
   {
     icon: Shield,
-    title: "HR Strategy & People Operations",
-    desc: "Specialists who diagnose systemic HR challenges — from capability gaps to stakeholder alignment — and guide participants through structured responses.",
+    title: "Functional & Professional Capability",
+    desc: "Specialists across HR, operations, finance, and management who diagnose capability gaps and guide participants through structured development.",
   },
   {
     icon: BarChart3,
@@ -100,13 +100,13 @@ const Index = () => {
             className="max-w-3xl"
           >
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-foreground uppercase tracking-wide premium-hero-title">
-              Developing Decision Capability in HR and Operational Leaders
+              Corporate Capability Development for Modern Organisations
             </h1>
             <p className="mt-6 text-lg md:text-xl text-primary-foreground/70 max-w-2xl leading-relaxed premium-body">
-              ORASIUS designs structured capability programs that improve
-              workplace judgement, influence, and operational leadership — built
-              for Caribbean organisations ready to strengthen their people and
-              performance.
+              ORASIUS designs structured training programs that strengthen
+              leadership, operational capability, professional judgement, and
+              organisational performance — supporting organisations globally
+              with current program delivery focused in the Caribbean.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button
@@ -144,7 +144,7 @@ const Index = () => {
               How Our Programs Work
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg premium-body">
-              Every ORASIUS program is designed to develop practical capability — not just knowledge. Here is what corporate buyers need to know.
+              Every ORASIUS program is designed to develop practical capability — not just knowledge. Programs span leadership, management, HR, communication, and operational effectiveness, customised to organisational needs.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -185,7 +185,7 @@ const Index = () => {
               Our Capability Development Methodology
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg premium-body">
-              We focus on developing judgement and decision-making — not just transferring information. Every element of our methodology is designed to create behaviour change that lasts beyond the classroom.
+              We focus on developing professional judgement and practical capability — not just transferring information. Every element of our methodology is designed to create behaviour change that lasts beyond the classroom.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -232,7 +232,7 @@ const Index = () => {
               Inside the Program
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg premium-body max-w-2xl mx-auto">
-              Participants don't sit through lectures. They work through realistic, challenging scenarios that mirror the decisions they face every day.
+              Participants don't sit through lectures. They work through realistic, challenging scenarios that mirror the decisions leaders, managers, and professionals face every day.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-4">
@@ -269,7 +269,7 @@ const Index = () => {
               Facilitators
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg premium-body">
-              Our facilitators are practitioners — not motivational speakers. They bring direct experience diagnosing leadership and HR challenges, and they guide participants through structured problem-solving.
+              Our facilitators are practitioners — not motivational speakers. They bring direct experience across leadership, management, and professional development, guiding participants through structured problem-solving.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
