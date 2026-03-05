@@ -232,7 +232,7 @@ const Index = () => {
               Inside the Program
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg premium-body max-w-2xl mx-auto">
-              Participants don't sit through lectures. They work through realistic, challenging scenarios that mirror the decisions they face every day.
+              Participants don't sit through lectures. They work through realistic, challenging scenarios that mirror the decisions leaders, managers, and professionals face every day.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-4">
