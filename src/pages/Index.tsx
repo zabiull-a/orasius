@@ -269,7 +269,7 @@ const Index = () => {
               Facilitators
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg premium-body">
-              Our facilitators are practitioners — not motivational speakers. They bring direct experience diagnosing leadership and HR challenges, and they guide participants through structured problem-solving.
+              Our facilitators are practitioners — not motivational speakers. They bring direct experience across leadership, management, and professional development, guiding participants through structured problem-solving.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

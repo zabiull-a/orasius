@@ -112,7 +112,7 @@ const Programs = () => {
       {/* Corporate CTA */}
       <section className="py-10 bg-accent">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-foreground font-medium text-lg">Looking for a tailored capability program for your organisation?</p>
+          <p className="text-foreground font-medium text-lg">Looking for a tailored training program for your organisation?</p>
           <Button asChild className="px-8 py-3 text-base">
             <Link to="/contact">Book Discovery Call <ArrowRight className="ml-1 h-4 w-4" /></Link>
           </Button>

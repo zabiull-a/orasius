@@ -78,7 +78,7 @@ const Contact = () => {
             {/* Form */}
             <div className="lg:col-span-2">
             <p className="text-muted-foreground mb-8 leading-relaxed premium-body">
-                We work with HR leaders, L&amp;D managers, and company executives to design capability development programs tailored to organisational needs. Use this form to book a discovery call, request a program brochure, or discuss corporate training requirements.
+                We work with organisations to design capability development and professional training programs tailored to their needs. Use this form to book a discovery call, request a program brochure, or discuss corporate training requirements.
               </p>
 
               {submitted ? (

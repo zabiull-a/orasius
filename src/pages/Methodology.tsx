@@ -96,7 +96,7 @@ const Methodology = () => {
             See It in Action
           </h2>
           <p className="mt-4 text-muted-foreground text-lg premium-body">
-            Book a discovery call to learn how our methodology can be applied to your organisation's specific capability challenges.
+            Book a discovery call to learn how our methodology can be applied to your organisation's specific training and capability development needs.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="px-10 py-3 text-base">
