@@ -48,7 +48,7 @@ const methodology = [
   { icon: Compass, title: "Real Workplace Scenarios", desc: "Participants work through situations drawn from actual organisational challenges — not textbook theory." },
   { icon: Brain, title: "Decision-Based Simulations", desc: "Structured exercises that require participants to assess information, weigh trade-offs, and justify their decisions." },
   { icon: MessageSquare, title: "Facilitated Discussion & Analysis", desc: "Guided group analysis of complex situations, developing critical thinking and stakeholder awareness." },
-  { icon: ClipboardCheck, title: "Applied Exercises & Reflection", desc: "Practical tasks followed by structured reflection to embed learning and build lasting capability." },
+  { icon: ClipboardCheck, title: "Applied Exercises & Reflection", desc: "Practical tasks followed by structured reflection to embed learning and build lasting professional capability." },
 ];
 
 const programExperience = [
