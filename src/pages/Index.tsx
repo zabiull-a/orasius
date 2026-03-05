@@ -63,13 +63,13 @@ const programExperience = [
 const facilitators = [
   {
     icon: Target,
-    title: "Leadership & Operational Decision-Making",
+    title: "Leadership & Operational Excellence",
     desc: "Facilitators with direct experience helping leaders improve decision quality, manage ambiguity, and lead through organisational complexity.",
   },
   {
     icon: Shield,
-    title: "HR Strategy & People Operations",
-    desc: "Specialists who diagnose systemic HR challenges — from capability gaps to stakeholder alignment — and guide participants through structured responses.",
+    title: "Functional & Professional Capability",
+    desc: "Specialists across HR, operations, finance, and management who diagnose capability gaps and guide participants through structured development.",
   },
   {
     icon: BarChart3,
