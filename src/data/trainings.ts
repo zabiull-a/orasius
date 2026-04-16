@@ -1,4 +1,4 @@
-import hrMasterclass from "@/assets/training-hr-masterclass.png";
+import hrMasterclass from "@/assets/training-hr-masterclass.webp";
 
 export interface Training {
   id: string;
