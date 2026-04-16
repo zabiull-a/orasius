@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import orasiusLogo from "@/assets/orasius-logo.png";
+import orasiusLogo from "@/assets/orasius-logo.webp";
 
 const Footer = () => {
   return (
