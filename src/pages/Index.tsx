@@ -20,6 +20,7 @@ import Layout from "@/components/layout/Layout";
 import { fadeUp, cardHover } from "@/lib/animations";
 import heroHome from "@/assets/hero-home.jpg";
 import ctaBoardroom from "@/assets/cta-boardroom.jpg";
+import OngoingTrainings from "@/components/OngoingTrainings";
 
 const programStructure = [
   {
