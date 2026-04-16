@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import Layout from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
-import heroContact from "@/assets/hero-contact.jpg";
+import globalImage from "@/lib/global-image";
 
 const contactSchema = z.object({
   fullName: z.string().trim().min(1, "Full name is required").max(100),
@@ -59,7 +59,7 @@ const Contact = () => {
     <Layout>
       <section
         className="relative overflow-hidden py-24 md:py-32 bg-cover bg-center parallax-bg"
-        style={{ backgroundImage: `url(${heroContact})` }}
+        style={{ backgroundImage: `url(${globalImage})` }}
       >
         <div className="absolute inset-0 bg-primary/90" />
         <div className="container relative z-10">

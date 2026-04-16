@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import { Heart, Lightbulb, Shield, Users, Globe } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { fadeUp, cardHover } from "@/lib/animations";
-import heroAbout from "@/assets/hero-about.jpg";
-import aboutVision from "@/assets/about-vision.jpg";
+import globalImage from "@/lib/global-image";
 
 const values = [
   { icon: Shield, title: "Integrity", desc: "We uphold the highest ethical standards in everything we do." },
@@ -19,7 +18,7 @@ const About = () => {
       {/* Hero */}
       <section
         className="relative overflow-hidden py-24 md:py-32 bg-cover bg-center parallax-bg"
-        style={{ backgroundImage: `url(${heroAbout})` }}
+        style={{ backgroundImage: `url(${globalImage})` }}
       >
         <div className="absolute inset-0 bg-primary/90" />
         <div className="container relative z-10">
@@ -80,7 +79,7 @@ const About = () => {
               className="hidden lg:block"
             >
               <img
-                src={aboutVision}
+                src={globalImage}
                 alt="Executive coaching and mentorship"
                 className="rounded-lg shadow-lg w-full h-auto object-cover"
                 loading="lazy"

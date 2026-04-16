@@ -7,7 +7,7 @@ import Layout from "@/components/layout/Layout";
 import { programs, programCategories } from "@/data/programs";
 import { cn } from "@/lib/utils";
 import { fadeUp, cardHover } from "@/lib/animations";
-import heroPrograms from "@/assets/hero-programs.jpg";
+import globalImage from "@/lib/global-image";
 
 const ProgramDetail = ({ programId }: { programId: string }) => {
   const program = programs.find((p) => p.id === programId);
@@ -17,7 +17,7 @@ const ProgramDetail = ({ programId }: { programId: string }) => {
     <Layout>
       <section
         className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center parallax-bg"
-        style={{ backgroundImage: `url(${heroPrograms})` }}
+        style={{ backgroundImage: `url(${globalImage})` }}
       >
         <div className="absolute inset-0 bg-primary/90" />
         <div className="container relative z-10">
@@ -96,7 +96,7 @@ const Programs = () => {
     <Layout>
       <section
         className="relative overflow-hidden py-24 md:py-32 bg-cover bg-center parallax-bg"
-        style={{ backgroundImage: `url(${heroPrograms})` }}
+        style={{ backgroundImage: `url(${globalImage})` }}
       >
         <div className="absolute inset-0 bg-primary/90" />
         <div className="container relative z-10">

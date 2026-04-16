@@ -4,7 +4,7 @@ import { Compass, Brain, MessageSquare, ClipboardCheck, ArrowRight } from "lucid
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { fadeUp } from "@/lib/animations";
-import heroWhatWeDo from "@/assets/hero-whatwedo.jpg";
+import globalImage from "@/lib/global-image";
 
 const steps = [
   {
@@ -34,7 +34,7 @@ const Methodology = () => {
     <Layout>
       <section
         className="relative overflow-hidden py-24 md:py-32 bg-cover bg-center parallax-bg"
-        style={{ backgroundImage: `url(${heroWhatWeDo})` }}
+        style={{ backgroundImage: `url(${globalImage})` }}
       >
         <div className="absolute inset-0 bg-primary/90" />
         <div className="container relative z-10">

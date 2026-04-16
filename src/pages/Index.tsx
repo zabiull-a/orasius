@@ -18,8 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { fadeUp, cardHover } from "@/lib/animations";
-import heroHome from "@/assets/hero-home.jpg";
-import ctaBoardroom from "@/assets/cta-boardroom.jpg";
+import globalImage from "@/lib/global-image";
 import OngoingTrainings from "@/components/OngoingTrainings";
 
 const programStructure = [
@@ -90,7 +89,7 @@ const Index = () => {
       {/* ── Hero ── */}
       <section
         className="relative overflow-hidden min-h-screen flex items-center bg-cover bg-center parallax-bg"
-        style={{ backgroundImage: `url(${heroHome})` }}
+        style={{ backgroundImage: `url(${globalImage})` }}
       >
         <div className="absolute inset-0 bg-primary/90" />
         <div className="container relative z-10 py-24 md:py-36">
@@ -301,7 +300,7 @@ const Index = () => {
       {/* ── CTA ── */}
       <section
         className="relative py-24 md:py-32 bg-cover bg-center parallax-bg"
-        style={{ backgroundImage: `url(${ctaBoardroom})` }}
+        style={{ backgroundImage: `url(${globalImage})` }}
       >
         <div className="absolute inset-0 bg-primary/92" />
         <div className="container relative z-10 text-center max-w-2xl">
