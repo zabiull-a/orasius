@@ -18,6 +18,6 @@ export const ongoingTrainings: Training[] = [
       "Aligning workforce strategy with modern talent acquisition to drive measurable business impact.",
     date: "May 6–8, 2026",
     posterImage: hrMasterclass,
-    whatsappLink: "https://wa.me/8884386913",
+    whatsappLink: "https://wa.me/918884386913?text=Hello%20I%20am%20interested%20in%20the%20HR%20Masterclass",
   },
 ];
