@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import { Heart, Lightbulb, Shield, Users, Globe } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { fadeUp, cardHover } from "@/lib/animations";
-import heroAbout from "@/assets/hero-about.jpg";
-import aboutVision from "@/assets/about-vision.jpg";
+import globalImage from "@/lib/global-image";
 
 const values = [
   { icon: Shield, title: "Integrity", desc: "We uphold the highest ethical standards in everything we do." },

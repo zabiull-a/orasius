@@ -4,7 +4,7 @@ import { Compass, Brain, MessageSquare, ClipboardCheck, ArrowRight } from "lucid
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { fadeUp } from "@/lib/animations";
-import heroWhatWeDo from "@/assets/hero-whatwedo.jpg";
+import globalImage from "@/lib/global-image";
 
 const steps = [
   {

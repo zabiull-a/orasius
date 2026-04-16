@@ -7,7 +7,7 @@ import Layout from "@/components/layout/Layout";
 import { programs, programCategories } from "@/data/programs";
 import { cn } from "@/lib/utils";
 import { fadeUp, cardHover } from "@/lib/animations";
-import heroPrograms from "@/assets/hero-programs.jpg";
+import globalImage from "@/lib/global-image";
 
 const ProgramDetail = ({ programId }: { programId: string }) => {
   const program = programs.find((p) => p.id === programId);

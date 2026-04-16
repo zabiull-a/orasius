@@ -18,8 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { fadeUp, cardHover } from "@/lib/animations";
-import heroHome from "@/assets/hero-home.jpg";
-import ctaBoardroom from "@/assets/cta-boardroom.jpg";
+import globalImage from "@/lib/global-image";
 import OngoingTrainings from "@/components/OngoingTrainings";
 
 const programStructure = [
