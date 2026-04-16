@@ -1,2 +1,2 @@
-import globalImage from "@/assets/global-image.jpg";
+import globalImage from "@/assets/global-image.webp";
 export default globalImage;
