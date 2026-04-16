@@ -20,6 +20,7 @@ import Layout from "@/components/layout/Layout";
 import { fadeUp, cardHover } from "@/lib/animations";
 import heroHome from "@/assets/hero-home.jpg";
 import ctaBoardroom from "@/assets/cta-boardroom.jpg";
+import OngoingTrainings from "@/components/OngoingTrainings";
 
 const programStructure = [
   {
@@ -128,6 +129,8 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+
+      <OngoingTrainings />
 
       {/* ── Program Overview ── */}
       <section className="py-24 md:py-32">
