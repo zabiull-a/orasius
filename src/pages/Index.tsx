@@ -130,6 +130,8 @@ const Index = () => {
         </div>
       </section>
 
+      <OngoingTrainings />
+
       {/* ── Program Overview ── */}
       <section className="py-24 md:py-32">
         <div className="container">
