@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import orasiusLogo from "@/assets/orasius-logo.webp";
+import orasiusLogo from "@/assets/orasius-logo-new.png";
 
 const navLinks = [
   { label: "Home", to: "/" },
