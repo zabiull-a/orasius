@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, Send, CheckCircle, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -143,6 +143,17 @@ const Contact = () => {
                   <li className="flex items-start gap-3">
                     <Mail className="h-5 w-5 mt-0.5 text-primary" />
                     <span>info@orasius.com</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <MessageCircle className="h-5 w-5 mt-0.5 text-primary" />
+                    <a
+                      href="https://wa.me/918884386913"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-foreground transition-colors"
+                    >
+                      WhatsApp: +91 8884386913
+                    </a>
                   </li>
                 </ul>
               </div>
