@@ -50,6 +50,16 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-primary-foreground/60">
               <li>Phone: +1 786 2436792</li>
               <li>Email: info@orasius.com</li>
+              <li>
+                <a
+                  href="https://wa.me/918884386913"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  WhatsApp: +91 8884386913
+                </a>
+              </li>
             </ul>
           </div>
 
