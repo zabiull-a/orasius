@@ -16,7 +16,7 @@ export const ongoingTrainings: Training[] = [
     title: "The Strategic HR Function & Talent Acquisition Masterclass",
     description:
       "Aligning workforce strategy with modern talent acquisition to drive measurable business impact.",
-    date: "June 7–9, 2026",
+    date: "June 9–11, 2026",
     posterImage: hrMasterclass,
     whatsappLink: "https://wa.me/918884386913?text=Hello%20I%20am%20interested%20in%20the%20HR%20Masterclass",
   },
