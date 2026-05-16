@@ -384,6 +384,113 @@ const Index = () => {
         </div>
       </section>
 
+
+      {/* ── Why ORASIUS ── */}
+      <section className="py-20 md:py-28">
+        <div className="container">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-wide premium-section-title">Why ORASIUS</h2>
+            <p className="mt-5 text-muted-foreground leading-relaxed text-base md:text-lg premium-body">
+              We are chosen by HR leaders, L&amp;D heads, and enterprise procurement teams that require credible, audit-ready training partners — not generic content vendors.
+            </p>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {whyOrasius.map((item, i) => (
+              <motion.div key={item.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i} className="p-6 md:p-8 rounded-lg border border-border bg-background">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-md bg-secondary">
+                  <item.icon className="h-6 w-6 text-primary" aria-hidden="true" />
+                </div>
+                <h3 className="font-semibold text-foreground mb-2 text-base md:text-lg">{item.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Certification & CPD ── */}
+      <section className="py-20 md:py-28 bg-secondary">
+        <div className="container max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-wide premium-section-title">
+                Certification &amp; CPD Credits
+              </h2>
+              <p className="mt-5 text-muted-foreground leading-relaxed text-base md:text-lg premium-body">
+                Every ORASIUS program issues a verifiable certificate of completion and is structured around Continuing Professional Development (CPD) credit hours — recognised by HR institutes, professional bodies, and enterprise L&amp;D frameworks.
+              </p>
+              <ul className="mt-6 space-y-3">
+                {[
+                  "Verifiable digital and printed certificates",
+                  "Structured CPD credit hours per program",
+                  "Mapped to enterprise capability frameworks",
+                  "Procurement-ready documentation on request",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm md:text-base text-muted-foreground">
+                    <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="p-8 md:p-10 rounded-lg bg-primary text-primary-foreground">
+              <Award className="h-10 w-10 mb-4" aria-hidden="true" />
+              <h3 className="font-display text-xl md:text-2xl font-semibold mb-3">Enterprise Learning Outcomes</h3>
+              <p className="text-primary-foreground/80 leading-relaxed text-sm md:text-base">
+                Capability uplift measured against pre-defined outcomes — including talent acquisition effectiveness, manager readiness, HR business partner maturity, and workforce performance indicators.
+              </p>
+              <Button asChild size="lg" className="mt-6 bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold">
+                <Link to="/contact">Request Program Brochure</Link>
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Industries We Support ── */}
+      <section className="py-20 md:py-28">
+        <div className="container">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-wide premium-section-title">Industries We Support</h2>
+            <p className="mt-5 text-muted-foreground leading-relaxed text-base md:text-lg premium-body">
+              ORASIUS delivers HR, leadership and workforce development training across regulated, customer-facing, and operationally complex sectors worldwide.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+            {industries.map((item, i) => (
+              <motion.div key={item.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i} className="flex items-center gap-3 p-4 md:p-5 rounded-lg border border-border bg-background">
+                <item.icon className="h-5 w-5 md:h-6 md:w-6 text-primary flex-shrink-0" aria-hidden="true" />
+                <span className="text-sm md:text-base font-medium text-foreground">{item.name}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="py-20 md:py-28 bg-secondary">
+        <div className="container max-w-3xl">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mb-10 md:mb-14">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-wide premium-section-title">Frequently Asked Questions</h2>
+            <p className="mt-5 text-muted-foreground leading-relaxed text-base md:text-lg premium-body">
+              Common questions from HR leaders and procurement teams evaluating ORASIUS for enterprise training engagements.
+            </p>
+          </motion.div>
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((f, i) => (
+              <AccordionItem key={i} value={`faq-${i}`}>
+                <AccordionTrigger className="text-left text-base md:text-lg font-semibold text-foreground">
+                  {f.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  {f.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section
         className="relative py-24 md:py-32 bg-cover bg-center parallax-bg"
