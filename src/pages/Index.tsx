@@ -14,12 +14,70 @@ import {
   UserCheck,
   Layers,
   Compass,
+  Award,
+  Building2,
+  Banknote,
+  HeartPulse,
+  Factory,
+  Cpu,
+  GraduationCap,
+  CheckCircle2,
 } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/seo/SEO";
 import { fadeUp, cardHover } from "@/lib/animations";
 import globalImage from "@/lib/global-image";
 import OngoingTrainings from "@/components/OngoingTrainings";
+
+const whyOrasius = [
+  { icon: Award, title: "Practitioner-Led Faculty", desc: "Programs designed and delivered by senior HR, leadership, and operations practitioners — not academic theorists." },
+  { icon: ClipboardCheck, title: "Outcome-Based Learning", desc: "Every program is structured around measurable capability outcomes mapped to enterprise performance metrics." },
+  { icon: Shield, title: "Enterprise-Grade Confidentiality", desc: "Procurement-ready engagements with clear data handling, IP protection, and contractual governance standards." },
+  { icon: GraduationCap, title: "Certification & CPD Credits", desc: "Programs issue verifiable certificates of completion with Continuing Professional Development credit hours." },
+];
+
+const industries = [
+  { icon: Banknote, name: "Banking & Financial Services" },
+  { icon: HeartPulse, name: "Healthcare & Life Sciences" },
+  { icon: Factory, name: "Manufacturing & Industrial" },
+  { icon: Cpu, name: "Technology & Professional Services" },
+  { icon: Building2, name: "Government & Public Sector" },
+  { icon: Users, name: "Hospitality, Retail & FMCG" },
+];
+
+const faqs = [
+  {
+    q: "What types of corporate training does ORASIUS deliver?",
+    a: "ORASIUS designs and delivers enterprise training across strategic HR, talent acquisition, leadership development, management capability, communication, and operational excellence — tailored to each organisation's workforce strategy.",
+  },
+  {
+    q: "Are ORASIUS programs certified or CPD-aligned?",
+    a: "Yes. Participants receive verifiable certificates of completion. Programs are structured to align with Continuing Professional Development (CPD) frameworks and award CPD credit hours.",
+  },
+  {
+    q: "Who are these programs designed for?",
+    a: "Programs serve HR leaders, talent acquisition teams, L&D managers, people managers, emerging leaders, and functional specialists across mid-sized and enterprise organisations.",
+  },
+  {
+    q: "Can programs be customised for a specific organisation?",
+    a: "Every engagement is scoped against the client's capability gaps, workforce strategy, and operating context. Content, case material, and simulations are tailored to the organisation.",
+  },
+  {
+    q: "How are programs delivered?",
+    a: "We deliver facilitator-led workshops in-person and through live virtual classrooms, blended cohorts, and structured multi-week tracks — depending on scope and learner geography.",
+  },
+  {
+    q: "How do we engage ORASIUS for a corporate program?",
+    a: "Book a discovery call or request a program brochure. Our team will scope objectives, audience, and delivery format, and return a tailored proposal within one business week.",
+  },
+];
 
 const programStructure = [
   {
