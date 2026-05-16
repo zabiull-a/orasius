@@ -157,14 +157,14 @@ const Index = () => {
             transition={{ duration: 0.7 }}
             className="max-w-3xl"
           >
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-foreground uppercase tracking-wide premium-hero-title">
-              Corporate Capability Development for Modern Organisations
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-foreground uppercase tracking-wide premium-hero-title">
+              Enterprise HR, Talent Acquisition &amp; Workforce Development Training
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-primary-foreground/70 max-w-2xl leading-relaxed premium-body">
-              ORASIUS designs structured training programs that strengthen
-              leadership, operational capability, professional judgement, and
-              organisational performance — supporting organisations globally
-              with current program delivery focused in the Caribbean.
+            <p className="mt-6 text-base sm:text-lg md:text-xl text-primary-foreground/75 max-w-2xl leading-relaxed premium-body">
+              ORASIUS partners with global enterprises to build measurable HR,
+              leadership, and workforce capability — through certification-aligned
+              programs designed and delivered by senior practitioners across HR,
+              talent acquisition, leadership, and operational excellence.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button
