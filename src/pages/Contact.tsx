@@ -1,14 +1,22 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, Send, CheckCircle, MessageCircle } from "lucide-react";
+import { Mail, Phone, Send, CheckCircle, MessageCircle, Linkedin, Youtube, Instagram, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/seo/SEO";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import globalImage from "@/lib/global-image";
+
+const contactSocials = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/orasius", Icon: Linkedin },
+  { label: "YouTube", href: "https://www.youtube.com/@orasius", Icon: Youtube },
+  { label: "Instagram", href: "https://www.instagram.com/orasius", Icon: Instagram },
+  { label: "X (Twitter)", href: "https://x.com/orasius", Icon: Twitter },
+];
 
 const contactSchema = z.object({
   fullName: z.string().trim().min(1, "Full name is required").max(100),
@@ -57,6 +65,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Contact ORASIUS | Book a Discovery Call for Enterprise Training"
+        description="Contact ORASIUS to book a discovery call or request a program brochure for enterprise HR, talent acquisition, leadership, and workforce development training."
+        path="/contact"
+      />
       <section
         className="relative overflow-hidden py-24 md:py-32 bg-cover bg-center parallax-bg"
         style={{ backgroundImage: `url(${globalImage})` }}
@@ -161,6 +174,23 @@ const Contact = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   We respond to all enquiries within <strong className="text-foreground">one business day</strong>. For urgent requests, please call us directly.
                 </p>
+              </div>
+              <div className="p-6 rounded-lg border border-border bg-background">
+                <h3 className="font-semibold text-foreground mb-3 text-base">Follow ORASIUS</h3>
+                <div className="flex items-center gap-3">
+                  {contactSocials.map(({ label, href, Icon }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`ORASIUS on ${label}`}
+                      className="flex h-10 w-10 items-center justify-center rounded-md border border-border text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                    >
+                      <Icon className="h-4 w-4" aria-hidden="true" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Clock, Monitor, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/seo/SEO";
 import { programs, programCategories } from "@/data/programs";
 import { cn } from "@/lib/utils";
 import { fadeUp, cardHover } from "@/lib/animations";
@@ -15,6 +16,11 @@ const ProgramDetail = ({ programId }: { programId: string }) => {
 
   return (
     <Layout>
+      <SEO
+        title={`${program.title} | ORASIUS Corporate Training`}
+        description={`${program.title} — enterprise training program by ORASIUS. ${program.category} program for HR leaders and organisations.`}
+        path={`/programs/${program.id}`}
+      />
       <section
         className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center parallax-bg"
         style={{ backgroundImage: `url(${globalImage})` }}
@@ -94,6 +100,11 @@ const Programs = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Corporate Training Programs | HR, Leadership & Workforce Development | ORASIUS"
+        description="Browse ORASIUS enterprise training programs across HR, talent acquisition, leadership, management, and workforce development — built for global organisations."
+        path="/programs"
+      />
       <section
         className="relative overflow-hidden py-24 md:py-32 bg-cover bg-center parallax-bg"
         style={{ backgroundImage: `url(${globalImage})` }}

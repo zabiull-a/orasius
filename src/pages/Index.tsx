@@ -14,12 +14,70 @@ import {
   UserCheck,
   Layers,
   Compass,
+  Award,
+  Building2,
+  Banknote,
+  HeartPulse,
+  Factory,
+  Cpu,
+  GraduationCap,
+  CheckCircle2,
 } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/seo/SEO";
 import { fadeUp, cardHover } from "@/lib/animations";
 import globalImage from "@/lib/global-image";
 import OngoingTrainings from "@/components/OngoingTrainings";
+
+const whyOrasius = [
+  { icon: Award, title: "Practitioner-Led Faculty", desc: "Programs designed and delivered by senior HR, leadership, and operations practitioners — not academic theorists." },
+  { icon: ClipboardCheck, title: "Outcome-Based Learning", desc: "Every program is structured around measurable capability outcomes mapped to enterprise performance metrics." },
+  { icon: Shield, title: "Enterprise-Grade Confidentiality", desc: "Procurement-ready engagements with clear data handling, IP protection, and contractual governance standards." },
+  { icon: GraduationCap, title: "Certification & CPD Credits", desc: "Programs issue verifiable certificates of completion with Continuing Professional Development credit hours." },
+];
+
+const industries = [
+  { icon: Banknote, name: "Banking & Financial Services" },
+  { icon: HeartPulse, name: "Healthcare & Life Sciences" },
+  { icon: Factory, name: "Manufacturing & Industrial" },
+  { icon: Cpu, name: "Technology & Professional Services" },
+  { icon: Building2, name: "Government & Public Sector" },
+  { icon: Users, name: "Hospitality, Retail & FMCG" },
+];
+
+const faqs = [
+  {
+    q: "What types of corporate training does ORASIUS deliver?",
+    a: "ORASIUS designs and delivers enterprise training across strategic HR, talent acquisition, leadership development, management capability, communication, and operational excellence — tailored to each organisation's workforce strategy.",
+  },
+  {
+    q: "Are ORASIUS programs certified or CPD-aligned?",
+    a: "Yes. Participants receive verifiable certificates of completion. Programs are structured to align with Continuing Professional Development (CPD) frameworks and award CPD credit hours.",
+  },
+  {
+    q: "Who are these programs designed for?",
+    a: "Programs serve HR leaders, talent acquisition teams, L&D managers, people managers, emerging leaders, and functional specialists across mid-sized and enterprise organisations.",
+  },
+  {
+    q: "Can programs be customised for a specific organisation?",
+    a: "Every engagement is scoped against the client's capability gaps, workforce strategy, and operating context. Content, case material, and simulations are tailored to the organisation.",
+  },
+  {
+    q: "How are programs delivered?",
+    a: "We deliver facilitator-led workshops in-person and through live virtual classrooms, blended cohorts, and structured multi-week tracks — depending on scope and learner geography.",
+  },
+  {
+    q: "How do we engage ORASIUS for a corporate program?",
+    a: "Book a discovery call or request a program brochure. Our team will scope objectives, audience, and delivery format, and return a tailored proposal within one business week.",
+  },
+];
 
 const programStructure = [
   {
@@ -84,8 +142,37 @@ const facilitators = [
 ];
 
 const Index = () => {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const courseJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Strategic HR Function & Talent Acquisition Masterclass",
+    description:
+      "Enterprise masterclass aligning workforce strategy with modern talent acquisition to drive measurable business impact.",
+    provider: {
+      "@type": "EducationalOrganization",
+      name: "ORASIUS",
+      sameAs: "https://www.orasius.com",
+    },
+  };
+
   return (
     <Layout>
+      <SEO
+        title="Enterprise HR, Talent Acquisition & Workforce Development Training | ORASIUS"
+        description="ORASIUS delivers enterprise HR, talent acquisition, leadership and workforce development training with certification and CPD credits for global organisations."
+        path="/"
+        jsonLd={[faqJsonLd, courseJsonLd]}
+      />
       {/* ── Hero ── */}
       <section
         className="relative overflow-hidden min-h-screen flex items-center bg-cover bg-center parallax-bg"
@@ -99,14 +186,14 @@ const Index = () => {
             transition={{ duration: 0.7 }}
             className="max-w-3xl"
           >
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-foreground uppercase tracking-wide premium-hero-title">
-              Corporate Capability Development for Modern Organisations
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-foreground uppercase tracking-wide premium-hero-title">
+              Enterprise HR, Talent Acquisition &amp; Workforce Development Training
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-primary-foreground/70 max-w-2xl leading-relaxed premium-body">
-              ORASIUS designs structured training programs that strengthen
-              leadership, operational capability, professional judgement, and
-              organisational performance — supporting organisations globally
-              with current program delivery focused in the Caribbean.
+            <p className="mt-6 text-base sm:text-lg md:text-xl text-primary-foreground/75 max-w-2xl leading-relaxed premium-body">
+              ORASIUS partners with global enterprises to build measurable HR,
+              leadership, and workforce capability — through certification-aligned
+              programs designed and delivered by senior practitioners across HR,
+              talent acquisition, leadership, and operational excellence.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button
@@ -294,6 +381,113 @@ const Index = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+
+      {/* ── Why ORASIUS ── */}
+      <section className="py-20 md:py-28">
+        <div className="container">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-wide premium-section-title">Why ORASIUS</h2>
+            <p className="mt-5 text-muted-foreground leading-relaxed text-base md:text-lg premium-body">
+              We are chosen by HR leaders, L&amp;D heads, and enterprise procurement teams that require credible, audit-ready training partners — not generic content vendors.
+            </p>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {whyOrasius.map((item, i) => (
+              <motion.div key={item.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i} className="p-6 md:p-8 rounded-lg border border-border bg-background">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-md bg-secondary">
+                  <item.icon className="h-6 w-6 text-primary" aria-hidden="true" />
+                </div>
+                <h3 className="font-semibold text-foreground mb-2 text-base md:text-lg">{item.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Certification & CPD ── */}
+      <section className="py-20 md:py-28 bg-secondary">
+        <div className="container max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-wide premium-section-title">
+                Certification &amp; CPD Credits
+              </h2>
+              <p className="mt-5 text-muted-foreground leading-relaxed text-base md:text-lg premium-body">
+                Every ORASIUS program issues a verifiable certificate of completion and is structured around Continuing Professional Development (CPD) credit hours — recognised by HR institutes, professional bodies, and enterprise L&amp;D frameworks.
+              </p>
+              <ul className="mt-6 space-y-3">
+                {[
+                  "Verifiable digital and printed certificates",
+                  "Structured CPD credit hours per program",
+                  "Mapped to enterprise capability frameworks",
+                  "Procurement-ready documentation on request",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm md:text-base text-muted-foreground">
+                    <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="p-8 md:p-10 rounded-lg bg-primary text-primary-foreground">
+              <Award className="h-10 w-10 mb-4" aria-hidden="true" />
+              <h3 className="font-display text-xl md:text-2xl font-semibold mb-3">Enterprise Learning Outcomes</h3>
+              <p className="text-primary-foreground/80 leading-relaxed text-sm md:text-base">
+                Capability uplift measured against pre-defined outcomes — including talent acquisition effectiveness, manager readiness, HR business partner maturity, and workforce performance indicators.
+              </p>
+              <Button asChild size="lg" className="mt-6 bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold">
+                <Link to="/contact">Request Program Brochure</Link>
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Industries We Support ── */}
+      <section className="py-20 md:py-28">
+        <div className="container">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-wide premium-section-title">Industries We Support</h2>
+            <p className="mt-5 text-muted-foreground leading-relaxed text-base md:text-lg premium-body">
+              ORASIUS delivers HR, leadership and workforce development training across regulated, customer-facing, and operationally complex sectors worldwide.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+            {industries.map((item, i) => (
+              <motion.div key={item.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i} className="flex items-center gap-3 p-4 md:p-5 rounded-lg border border-border bg-background">
+                <item.icon className="h-5 w-5 md:h-6 md:w-6 text-primary flex-shrink-0" aria-hidden="true" />
+                <span className="text-sm md:text-base font-medium text-foreground">{item.name}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="py-20 md:py-28 bg-secondary">
+        <div className="container max-w-3xl">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mb-10 md:mb-14">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-wide premium-section-title">Frequently Asked Questions</h2>
+            <p className="mt-5 text-muted-foreground leading-relaxed text-base md:text-lg premium-body">
+              Common questions from HR leaders and procurement teams evaluating ORASIUS for enterprise training engagements.
+            </p>
+          </motion.div>
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((f, i) => (
+              <AccordionItem key={i} value={`faq-${i}`}>
+                <AccordionTrigger className="text-left text-base md:text-lg font-semibold text-foreground">
+                  {f.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  {f.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 
