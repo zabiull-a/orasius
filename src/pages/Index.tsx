@@ -142,8 +142,37 @@ const facilitators = [
 ];
 
 const Index = () => {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const courseJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Strategic HR Function & Talent Acquisition Masterclass",
+    description:
+      "Enterprise masterclass aligning workforce strategy with modern talent acquisition to drive measurable business impact.",
+    provider: {
+      "@type": "EducationalOrganization",
+      name: "ORASIUS",
+      sameAs: "https://www.orasius.com",
+    },
+  };
+
   return (
     <Layout>
+      <SEO
+        title="Enterprise HR, Talent Acquisition & Workforce Development Training | ORASIUS"
+        description="ORASIUS delivers enterprise HR, talent acquisition, leadership and workforce development training with certification and CPD credits for global organisations."
+        path="/"
+        jsonLd={[faqJsonLd, courseJsonLd]}
+      />
       {/* ── Hero ── */}
       <section
         className="relative overflow-hidden min-h-screen flex items-center bg-cover bg-center parallax-bg"
