@@ -1,14 +1,22 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, Send, CheckCircle, MessageCircle } from "lucide-react";
+import { Mail, Phone, Send, CheckCircle, MessageCircle, Linkedin, Youtube, Instagram, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/seo/SEO";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import globalImage from "@/lib/global-image";
+
+const contactSocials = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/orasius", Icon: Linkedin },
+  { label: "YouTube", href: "https://www.youtube.com/@orasius", Icon: Youtube },
+  { label: "Instagram", href: "https://www.instagram.com/orasius", Icon: Instagram },
+  { label: "X (Twitter)", href: "https://x.com/orasius", Icon: Twitter },
+];
 
 const contactSchema = z.object({
   fullName: z.string().trim().min(1, "Full name is required").max(100),
