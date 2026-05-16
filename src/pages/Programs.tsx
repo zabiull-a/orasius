@@ -100,6 +100,11 @@ const Programs = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Corporate Training Programs | HR, Leadership & Workforce Development | ORASIUS"
+        description="Browse ORASIUS enterprise training programs across HR, talent acquisition, leadership, management, and workforce development — built for global organisations."
+        path="/programs"
+      />
       <section
         className="relative overflow-hidden py-24 md:py-32 bg-cover bg-center parallax-bg"
         style={{ backgroundImage: `url(${globalImage})` }}
