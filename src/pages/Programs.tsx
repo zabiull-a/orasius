@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Clock, Monitor, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/seo/SEO";
 import { programs, programCategories } from "@/data/programs";
 import { cn } from "@/lib/utils";
 import { fadeUp, cardHover } from "@/lib/animations";
