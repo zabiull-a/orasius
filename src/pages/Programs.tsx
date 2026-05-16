@@ -16,6 +16,11 @@ const ProgramDetail = ({ programId }: { programId: string }) => {
 
   return (
     <Layout>
+      <SEO
+        title={`${program.title} | ORASIUS Corporate Training`}
+        description={`${program.title} — enterprise training program by ORASIUS. ${program.category} program for HR leaders and organisations.`}
+        path={`/programs/${program.id}`}
+      />
       <section
         className="relative overflow-hidden py-20 md:py-28 bg-cover bg-center parallax-bg"
         style={{ backgroundImage: `url(${globalImage})` }}
