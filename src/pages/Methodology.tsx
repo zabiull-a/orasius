@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Compass, Brain, MessageSquare, ClipboardCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/seo/SEO";
 import { fadeUp } from "@/lib/animations";
 import globalImage from "@/lib/global-image";
 
@@ -32,6 +33,11 @@ const steps = [
 const Methodology = () => {
   return (
     <Layout>
+      <SEO
+        title="Training Methodology | Capability Development Approach | ORASIUS"
+        description="ORASIUS uses real workplace scenarios, decision-based simulations, and facilitated analysis to develop measurable enterprise capability and lasting behaviour change."
+        path="/methodology"
+      />
       <section
         className="relative overflow-hidden py-24 md:py-32 bg-cover bg-center parallax-bg"
         style={{ backgroundImage: `url(${globalImage})` }}

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Heart, Lightbulb, Shield, Users, Globe } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/seo/SEO";
 import { fadeUp, cardHover } from "@/lib/animations";
 import globalImage from "@/lib/global-image";
 
@@ -15,6 +16,11 @@ const values = [
 const About = () => {
   return (
     <Layout>
+      <SEO
+        title="About ORASIUS | Enterprise Training & Workforce Development"
+        description="ORASIUS is a global enterprise training partner for HR, talent acquisition, leadership, and workforce development — built for HR leaders and procurement teams."
+        path="/about"
+      />
       {/* Hero */}
       <section
         className="relative overflow-hidden py-24 md:py-32 bg-cover bg-center parallax-bg"
