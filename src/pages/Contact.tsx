@@ -29,6 +29,8 @@ const contactSchema = z.object({
 
 type ContactForm = z.infer<typeof contactSchema>;
 
+const WEB3FORMS_ACCESS_KEY = "22441ce9-183c-4069-b0f9-d71a4b5de5ff";
+
 const Contact = () => {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
@@ -65,19 +67,23 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/info@orasius.com", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "New ORASIUS Contact Form Lead",
+          from_name: "ORASIUS Website",
           ...form,
-          _subject: "New ORASIUS Contact Form Lead",
         }),
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (data.success) {
         setSubmitted(true);
 
         toast({
@@ -151,7 +157,7 @@ const Contact = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <input type="text" name="_honey" style={{ display: "none" }} />
+                  <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
 
                   <div className="grid md:grid-cols-2 gap-5">
                     <div className="space-y-2">
