@@ -47,20 +47,66 @@ const Contact = () => {
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     const result = contactSchema.safeParse(form);
+
     if (!result.success) {
       const fieldErrors: Partial<Record<keyof ContactForm, string>> = {};
+
       result.error.errors.forEach((err) => {
         const field = err.path[0] as keyof ContactForm;
         fieldErrors[field] = err.message;
       });
+
       setErrors(fieldErrors);
       return;
     }
-    setSubmitted(true);
-    toast({ title: "Message sent!", description: "We'll get back to you soon." });
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/info@orasius.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...form,
+          _subject: "New ORASIUS Contact Form Lead",
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+
+        toast({
+          title: "Message sent!",
+          description: "We'll get back to you soon.",
+        });
+
+        setForm({
+          fullName: "",
+          email: "",
+          phone: "",
+          organization: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to send message.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -105,6 +151,8 @@ const Contact = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  <input type="text" name="_honey" style={{ display: "none" }} />
+
                   <div className="grid md:grid-cols-2 gap-5">
                     <div className="space-y-2">
                       <Label htmlFor="fullName">Full Name *</Label>
