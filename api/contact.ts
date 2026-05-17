@@ -16,7 +16,7 @@ export default async function handler(req: any, res: any) {
   try {
     await resend.emails.send({
       from: 'ORASIUS Contact <onboarding@resend.dev>',
-      to: 'info@orasius.com',
+      to: 'finance@orasius.com',
       subject: 'New Contact Form Lead: ' + subject,
       html: '<h2>New Contact Form Submission</h2>' +
       '<p><strong>Full Name:</strong> ' + fullName + '</p>' +
