@@ -29,8 +29,6 @@ const contactSchema = z.object({
 
 type ContactForm = z.infer<typeof contactSchema>;
 
-const WEB3FORMS_ACCESS_KEY = "22441ce9-183c-4069-b0f9-d71a4b5de5ff";
-
 const Contact = () => {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
@@ -67,23 +65,15 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          subject: "New ORASIUS Contact Form Lead",
-          from_name: "ORASIUS Website",
-          ...form,
-        }),
+        body: JSON.stringify(form),
       });
 
-      const data = await response.json();
-
-      if (data.success) {
+      if (response.ok) {
         setSubmitted(true);
 
         toast({
@@ -140,7 +130,6 @@ const Contact = () => {
       <section className="py-20 md:py-28">
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-12">
-            {/* Form */}
             <div className="lg:col-span-2">
             <p className="text-muted-foreground mb-8 leading-relaxed premium-body">
                 We work with organisations to design capability development and professional training programs tailored to their needs. Use this form to book a discovery call, request a program brochure, or discuss corporate training requirements.
@@ -157,8 +146,6 @@ const Contact = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
-
                   <div className="grid md:grid-cols-2 gap-5">
                     <div className="space-y-2">
                       <Label htmlFor="fullName">Full Name *</Label>
@@ -198,7 +185,6 @@ const Contact = () => {
               )}
             </div>
 
-            {/* Sidebar */}
             <div className="space-y-6">
               <div className="p-8 rounded-lg bg-secondary">
                 <h3 className="font-semibold text-foreground mb-4 text-lg">Get in Touch</h3>
@@ -223,28 +209,6 @@ const Contact = () => {
                     </a>
                   </li>
                 </ul>
-              </div>
-              <div className="p-6 rounded-lg border border-border bg-background">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  We respond to all enquiries within <strong className="text-foreground">one business day</strong>. For urgent requests, please call us directly.
-                </p>
-              </div>
-              <div className="p-6 rounded-lg border border-border bg-background">
-                <h3 className="font-semibold text-foreground mb-3 text-base">Follow ORASIUS</h3>
-                <div className="flex items-center gap-3">
-                  {contactSocials.map(({ label, href, Icon }) => (
-                    <a
-                      key={label}
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`ORASIUS on ${label}`}
-                      className="flex h-10 w-10 items-center justify-center rounded-md border border-border text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                    >
-                      <Icon className="h-4 w-4" aria-hidden="true" />
-                    </a>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
