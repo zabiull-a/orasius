@@ -14,8 +14,8 @@ import globalImage from "@/lib/global-image";
 const contactSocials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/company/orasius", Icon: Linkedin },
   { label: "YouTube", href: "https://www.youtube.com/@orasius", Icon: Youtube },
-  { label: "Instagram", href: "https://www.instagram.com/orasius", Icon: Instagram },
-  { label: "X (Twitter)", href: "https://x.com/orasius", Icon: Twitter },
+  { label: "Instagram", href: "https://www.instagram.com/orasius.co", Icon: Instagram },
+  { label: "X (Twitter)", href: "https://x.com/orasius_co", Icon: Twitter },
 ];
 
 const contactSchema = z.object({
