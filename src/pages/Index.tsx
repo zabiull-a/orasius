@@ -189,8 +189,8 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-        title="Enterprise HR, Talent Acquisition & Workforce Development Training | ORASIUS"
-        description="ORASIUS delivers enterprise HR, talent acquisition, leadership and workforce development training with certification and CPD credits for global organisations."
+        title="Enterprise Learning Solutions Across Industries | ORASIUS"
+        description="ORASIUS delivers multi-industry professional training and workforce development — leadership, finance, safety, operations, compliance, HR, customer service and certifications for enterprises across the Caribbean and globally."
         path="/"
         jsonLd={[faqJsonLd, courseJsonLd]}
       />
@@ -208,13 +208,14 @@ const Index = () => {
             className="max-w-3xl"
           >
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-foreground uppercase tracking-wide premium-hero-title">
-              Enterprise HR, Talent Acquisition &amp; Workforce Development Training
+              Enterprise Learning Solutions Across Industries
             </h1>
             <p className="mt-6 text-base sm:text-lg md:text-xl text-primary-foreground/75 max-w-2xl leading-relaxed premium-body">
-              ORASIUS partners with global enterprises to build measurable HR,
-              leadership, and workforce capability — through certification-aligned
-              programs designed and delivered by senior practitioners across HR,
-              talent acquisition, leadership, and operational excellence.
+              ORASIUS is a multi-industry professional training and workforce
+              development partner for enterprises across the Caribbean and
+              beyond — delivering certification-aligned programs in leadership,
+              finance, safety, operations, compliance, customer service,
+              communication, HR and talent acquisition.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button
