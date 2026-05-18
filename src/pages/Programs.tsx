@@ -102,7 +102,7 @@ const Programs = () => {
     <Layout>
       <SEO
         title="Corporate Training Programs | HR, Leadership & Workforce Development | ORASIUS"
-        description="Browse ORASIUS enterprise training programs across HR, talent acquisition, leadership, management, and workforce development — built for global organisations."
+        description="Browse ORASIUS professional training programs across leadership, finance, safety, operations, compliance, customer service, communication, HR and workforce upskilling — for enterprises across industries."
         path="/programs"
       />
       <section
