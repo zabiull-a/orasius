@@ -475,7 +475,7 @@ const Index = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-wide premium-section-title">Industries We Support</h2>
             <p className="mt-5 text-muted-foreground leading-relaxed text-base md:text-lg premium-body">
-              ORASIUS delivers HR, leadership and workforce development training across regulated, customer-facing, and operationally complex sectors worldwide.
+              ORASIUS delivers professional training and workforce development across regulated, customer-facing, and operationally complex sectors in the Caribbean region and globally.
             </p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
