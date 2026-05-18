@@ -495,7 +495,7 @@ const Index = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mb-10 md:mb-14">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-wide premium-section-title">Frequently Asked Questions</h2>
             <p className="mt-5 text-muted-foreground leading-relaxed text-base md:text-lg premium-body">
-              Common questions from HR leaders and procurement teams evaluating ORASIUS for enterprise training engagements.
+              Common questions from executives, L&amp;D heads, and procurement teams evaluating ORASIUS for enterprise training engagements.
             </p>
           </motion.div>
           <Accordion type="single" collapsible className="w-full">
