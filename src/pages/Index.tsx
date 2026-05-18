@@ -255,7 +255,7 @@ const Index = () => {
               How Our Programs Work
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg premium-body">
-              Every ORASIUS program is designed to develop practical capability — not just knowledge. Programs span leadership, management, HR, communication, and operational effectiveness, customised to organisational needs.
+              Every ORASIUS program is designed to develop practical capability — not just knowledge. Programs span leadership, finance and banking, workplace safety, operations, compliance, customer service, communication, management, HR and talent acquisition, and broader workforce upskilling — customised to each organisation and industry.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
