@@ -413,7 +413,7 @@ const Index = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-wide premium-section-title">Why ORASIUS</h2>
             <p className="mt-5 text-muted-foreground leading-relaxed text-base md:text-lg premium-body">
-              We are chosen by HR leaders, L&amp;D heads, and enterprise procurement teams that require credible, audit-ready training partners — not generic content vendors.
+              We are chosen by executives, L&amp;D heads, and enterprise procurement teams across industries that require credible, audit-ready training partners — not generic content vendors.
             </p>
           </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
