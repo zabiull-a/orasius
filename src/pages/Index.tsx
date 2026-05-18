@@ -37,25 +37,46 @@ import globalImage from "@/lib/global-image";
 import OngoingTrainings from "@/components/OngoingTrainings";
 
 const whyOrasius = [
-  { icon: Award, title: "Practitioner-Led Faculty", desc: "Programs designed and delivered by senior HR, leadership, and operations practitioners — not academic theorists." },
-  { icon: ClipboardCheck, title: "Outcome-Based Learning", desc: "Every program is structured around measurable capability outcomes mapped to enterprise performance metrics." },
+  { icon: Award, title: "Practitioner-Led Faculty", desc: "Programs designed and delivered by senior industry practitioners across leadership, finance, operations, safety, HR, and compliance — not academic theorists." },
+  { icon: ClipboardCheck, title: "Outcome-Based Learning", desc: "Every program is structured around measurable capability outcomes mapped to enterprise performance and workforce productivity metrics." },
   { icon: Shield, title: "Enterprise-Grade Confidentiality", desc: "Procurement-ready engagements with clear data handling, IP protection, and contractual governance standards." },
   { icon: GraduationCap, title: "Certification & CPD Credits", desc: "Programs issue verifiable certificates of completion with Continuing Professional Development credit hours." },
 ];
 
+const capabilityAreas = [
+  "Leadership Development",
+  "Finance & Banking",
+  "Workplace Safety",
+  "Operations & Process Excellence",
+  "Compliance & Governance",
+  "Customer Service",
+  "Corporate Communication",
+  "Management & Supervisory Skills",
+  "Professional Certifications",
+  "Workforce Upskilling",
+  "HR & Talent Acquisition",
+  "Organizational Capability Development",
+];
+
 const industries = [
-  { icon: Banknote, name: "Banking & Financial Services" },
-  { icon: HeartPulse, name: "Healthcare & Life Sciences" },
-  { icon: Factory, name: "Manufacturing & Industrial" },
-  { icon: Cpu, name: "Technology & Professional Services" },
+  { icon: Banknote, name: "Banking & Finance" },
+  { icon: HeartPulse, name: "Healthcare" },
   { icon: Building2, name: "Government & Public Sector" },
-  { icon: Users, name: "Hospitality, Retail & FMCG" },
+  { icon: Factory, name: "Energy & Manufacturing" },
+  { icon: Users, name: "Retail & Hospitality" },
+  { icon: Cpu, name: "Telecommunications & Technology" },
+  { icon: Layers, name: "Corporate & Professional Services" },
+  { icon: UserCheck, name: "Human Capital & Recruitment" },
 ];
 
 const faqs = [
   {
     q: "What types of corporate training does ORASIUS deliver?",
-    a: "ORASIUS designs and delivers enterprise training across strategic HR, talent acquisition, leadership development, management capability, communication, and operational excellence — tailored to each organisation's workforce strategy.",
+    a: "ORASIUS designs and delivers enterprise training across leadership, finance and banking, workplace safety, operations, compliance, customer service, corporate communication, management, HR and talent acquisition, and broader workforce upskilling — tailored to each organisation's capability strategy.",
+  },
+  {
+    q: "Which industries do you serve?",
+    a: "We work with enterprises and public sector organisations across banking and finance, healthcare, government, energy, manufacturing, retail, hospitality, telecommunications, corporate services, and human capital — in the Caribbean region and globally.",
   },
   {
     q: "Are ORASIUS programs certified or CPD-aligned?",
@@ -63,11 +84,11 @@ const faqs = [
   },
   {
     q: "Who are these programs designed for?",
-    a: "Programs serve HR leaders, talent acquisition teams, L&D managers, people managers, emerging leaders, and functional specialists across mid-sized and enterprise organisations.",
+    a: "Programs serve executives, managers, functional specialists, supervisors, professional staff and emerging leaders across enterprise and public sector organisations.",
   },
   {
     q: "Can programs be customised for a specific organisation?",
-    a: "Every engagement is scoped against the client's capability gaps, workforce strategy, and operating context. Content, case material, and simulations are tailored to the organisation.",
+    a: "Every engagement is scoped against the client's capability gaps, workforce strategy, and operating context. Content, case material, and simulations are tailored to the organisation and industry.",
   },
   {
     q: "How are programs delivered?",
