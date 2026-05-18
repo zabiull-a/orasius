@@ -22,7 +22,7 @@ const Footer = () => {
               className="h-12 w-auto brightness-0 invert"
             />
             <p className="mt-3 text-sm text-primary-foreground/60 leading-relaxed">
-              Enterprise HR, talent acquisition, leadership and workforce development training for global organisations.
+              Multi-industry professional training and workforce development for enterprises across the Caribbean region and globally — leadership, finance, safety, operations, compliance, HR and more.
             </p>
             <div className="mt-5 flex items-center gap-3">
               {socials.map(({ label, href, Icon }) => (
