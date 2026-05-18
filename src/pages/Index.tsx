@@ -240,6 +240,45 @@ const Index = () => {
 
       <OngoingTrainings />
 
+      {/* ── Corporate Learning Solutions ── */}
+      <section className="py-20 md:py-28 bg-secondary">
+        <div className="container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={0}
+            className="max-w-3xl mx-auto text-center mb-12 md:mb-16"
+          >
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-wide premium-section-title">
+              Corporate Learning Solutions
+            </h2>
+            <p className="mt-5 text-muted-foreground leading-relaxed text-base md:text-lg premium-body">
+              A multi-industry portfolio of professional training and workforce
+              development areas — engineered for enterprise capability transformation,
+              professional advancement, and measurable business outcomes.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto">
+            {capabilityAreas.map((item, i) => (
+              <motion.div
+                key={item}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                custom={i}
+                className="flex items-start gap-2 p-4 rounded-lg border border-border bg-background"
+              >
+                <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <span className="text-sm md:text-base font-medium text-foreground leading-snug">{item}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Program Overview ── */}
       <section className="py-24 md:py-32">
         <div className="container">
