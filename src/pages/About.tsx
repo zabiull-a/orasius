@@ -18,7 +18,7 @@ const About = () => {
     <Layout>
       <SEO
         title="About ORASIUS | Enterprise Training & Workforce Development"
-        description="ORASIUS is a global enterprise training partner for HR, talent acquisition, leadership, and workforce development — built for HR leaders and procurement teams."
+        description="ORASIUS is a multi-industry professional training and workforce development partner serving enterprises across the Caribbean and globally — leadership, finance, safety, operations, compliance, HR and more."
         path="/about"
       />
       {/* Hero */}

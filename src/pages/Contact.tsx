@@ -109,7 +109,7 @@ const Contact = () => {
     <Layout>
       <SEO
         title="Contact ORASIUS | Book a Discovery Call for Enterprise Training"
-        description="Contact ORASIUS to book a discovery call or request a program brochure for enterprise HR, talent acquisition, leadership, and workforce development training."
+        description="Contact ORASIUS to book a discovery call or request a program brochure for multi-industry professional training and workforce development programs."
         path="/contact"
       />
       <section
