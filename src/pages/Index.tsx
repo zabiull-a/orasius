@@ -459,7 +459,7 @@ const Index = () => {
               <Award className="h-10 w-10 mb-4" aria-hidden="true" />
               <h3 className="font-display text-xl md:text-2xl font-semibold mb-3">Enterprise Learning Outcomes</h3>
               <p className="text-primary-foreground/80 leading-relaxed text-sm md:text-base">
-                Capability uplift measured against pre-defined outcomes — including talent acquisition effectiveness, manager readiness, HR business partner maturity, and workforce performance indicators.
+                Capability uplift measured against pre-defined outcomes — including leadership readiness, operational and safety performance, compliance maturity, customer experience quality, and workforce productivity indicators.
               </p>
               <Button asChild size="lg" className="mt-6 bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold">
                 <Link to="/contact">Request Program Brochure</Link>
