@@ -42,6 +42,13 @@ const OngoingTrainings = () => {
                 alt={training.title}
                 className="w-full h-auto object-contain bg-primary-foreground/5"
                 loading="lazy"
+                onError={(e) => {
+                  const img = e.currentTarget;
+                  if (!img.dataset.fallback) {
+                    img.dataset.fallback = "true";
+                    img.src = "/placeholder.svg";
+                  }
+                }}
               />
               <div className="p-6 md:p-10">
                 <h3 className="font-display text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
