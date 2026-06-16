@@ -8,7 +8,7 @@ const OngoingTrainings = () => {
   if (ongoingTrainings.length === 0) return null;
 
   return (
-    <section className="py-24 md:py-32 bg-primary">
+    <section className="py-20 md:py-28 bg-primary">
       <div className="container">
         <motion.div
           initial="hidden"
@@ -16,17 +16,17 @@ const OngoingTrainings = () => {
           viewport={{ once: true }}
           variants={fadeUp}
           custom={0}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground uppercase tracking-wide premium-section-title">
             Ongoing Trainings
           </h2>
-          <p className="mt-4 text-primary-foreground/60 text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-primary-foreground/60 text-base md:text-lg max-w-2xl mx-auto">
             Currently running and upcoming programs open for registration.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="flex justify-center">
           {ongoingTrainings.map((training, i) => (
             <motion.div
               key={training.id}
@@ -35,22 +35,22 @@ const OngoingTrainings = () => {
               viewport={{ once: true }}
               variants={fadeUp}
               custom={i}
-              className="rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 overflow-hidden"
+              className="w-full max-w-4xl rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 overflow-hidden"
             >
               <img
                 src={training.posterImage}
                 alt={training.title}
-                className="w-full object-cover"
+                className="w-full h-auto object-contain bg-primary-foreground/5"
                 loading="lazy"
               />
-              <div className="p-6 md:p-8">
-                <h3 className="font-display text-xl font-bold text-primary-foreground mb-3">
+              <div className="p-6 md:p-10">
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
                   {training.title}
                 </h3>
-                <p className="text-primary-foreground/70 text-sm md:text-base leading-relaxed mb-4">
+                <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-5">
                   {training.description}
                 </p>
-                <div className="flex items-center gap-2 text-primary-foreground/60 text-sm mb-6">
+                <div className="flex items-center gap-2 text-primary-foreground/60 text-sm md:text-base mb-6">
                   <CalendarDays className="h-4 w-4" />
                   <span>{training.date}</span>
                 </div>
@@ -87,3 +87,4 @@ const OngoingTrainings = () => {
 };
 
 export default OngoingTrainings;
+
