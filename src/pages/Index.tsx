@@ -176,14 +176,17 @@ const Index = () => {
   const courseJsonLd = {
     "@context": "https://schema.org",
     "@type": "Course",
-    name: "Strategic HR Function & Talent Acquisition Masterclass",
+    name: "Certification in Advanced Business Writing Using AI",
     description:
-      "Enterprise masterclass aligning workforce strategy with modern talent acquisition to drive measurable business impact.",
+      "Live virtual executive certification. Master executive reports, proposals, policies and strategic communication using AI. 30 July 2026.",
     provider: {
       "@type": "EducationalOrganization",
       name: "ORASIUS",
       sameAs: "https://www.orasius.com",
     },
+    startDate: "2026-07-30",
+    educationalCredentialAwarded: "Executive Certification",
+    courseMode: "online",
   };
 
   return (
