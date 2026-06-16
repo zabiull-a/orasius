@@ -1,4 +1,4 @@
-import hrMasterclass from "@/assets/training-hr-masterclass.webp";
+import businessWritingPoster from "@/assets/training-business-writing-ai.webp.asset.json";
 
 export interface Training {
   id: string;
@@ -12,12 +12,13 @@ export interface Training {
 
 export const ongoingTrainings: Training[] = [
   {
-    id: "hr-masterclass-may-2026",
-    title: "The Strategic HR Function & Talent Acquisition Masterclass",
+    id: "business-writing-ai-jul-2026",
+    title: "Certification in Advanced Business Writing Using AI",
     description:
-      "Aligning workforce strategy with modern talent acquisition to drive measurable business impact.",
-    date: "June 9–11, 2026",
-    posterImage: hrMasterclass,
-    whatsappLink: "https://wa.me/918884386913?text=Hello%20I%20am%20interested%20in%20the%20HR%20Masterclass",
+      "Write like a leader. Use AI like a professional. Master executive reports, proposals, policies and strategic communication using AI.",
+    date: "30 July 2026",
+    posterImage: businessWritingPoster.url,
+    whatsappLink:
+      "https://wa.me/918884386913?text=Hello%2C%20I%20want%20to%20secure%20my%20seat%20for%20the%20Advanced%20Business%20Writing%20Using%20AI%20certification",
   },
 ];
