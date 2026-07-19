@@ -21,6 +21,8 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const DataSecurity = lazy(() => import("./pages/DataSecurity"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const Register = lazy(() => import("./pages/Register"));
+const Research = lazy(() => import("./pages/Research"));
+const ResearchArticle = lazy(() => import("./pages/ResearchArticle"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -47,6 +49,8 @@ const App = () => (
             <Route path="/data-security" element={<DataSecurity />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/research" element={<Research />} />
+            <Route path="/research/:slug" element={<ResearchArticle />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
