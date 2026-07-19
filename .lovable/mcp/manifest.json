@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "sdk_version": "0.23.0",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "orasius-mcp",
+      "version": "0.1.0",
+      "title": "ORASIUS Corporate Training"
+    },
+    "tools": [
+      {
+        "name": "list_programs",
+        "title": "List training programs",
+        "description": "List ORASIUS corporate training programs. Optionally filter by category or status.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "enum": [
+                "Leadership",
+                "HR",
+                "Technology",
+                "Finance",
+                "Supply Chain",
+                "Health & Safety",
+                "Risk Management",
+                "Professional Development"
+              ],
+              "description": "Filter by program category."
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "Upcoming",
+                "Ongoing",
+                "Past"
+              ],
+              "description": "Filter by program status."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_program",
+        "title": "Get program details",
+        "description": "Fetch full details of a single ORASIUS training program by id (e.g. 'strategic-leadership').",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The program id."
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_ongoing_trainings",
+        "title": "List ongoing trainings",
+        "description": "List currently running and upcoming ORASIUS training sessions with dates and booking links.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_contact_info",
+        "title": "Get ORASIUS contact info",
+        "description": "Return ORASIUS contact details: email, phone, and WhatsApp.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
