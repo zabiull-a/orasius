@@ -184,7 +184,7 @@ const Index = () => {
       name: "ORASIUS",
       sameAs: "https://www.orasius.com",
     },
-    startDate: "2026-07-30",
+    startDate: "2026-09-15",
     educationalCredentialAwarded: "Executive Certification",
     courseMode: "online",
   };
