@@ -178,13 +178,13 @@ const Index = () => {
     "@type": "Course",
     name: "Certification in Advanced Business Writing Using AI",
     description:
-      "Live virtual executive certification. Master executive reports, proposals, policies and strategic communication using AI. 30 July 2026.",
+      "Live virtual executive certification. Master executive reports, proposals, policies and strategic communication using AI. 15 September 2026.",
     provider: {
       "@type": "EducationalOrganization",
       name: "ORASIUS",
       sameAs: "https://www.orasius.com",
     },
-    startDate: "2026-07-30",
+    startDate: "2026-09-15",
     educationalCredentialAwarded: "Executive Certification",
     courseMode: "online",
   };
