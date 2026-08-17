@@ -176,15 +176,16 @@ const Index = () => {
   const courseJsonLd = {
     "@context": "https://schema.org",
     "@type": "Course",
-    name: "Certification in Advanced Business Writing Using AI",
+    name: "Certified in Succession Planning",
     description:
-      "Live virtual executive certification. Master executive reports, proposals, policies and strategic communication using AI. 15 September 2026.",
+      "Live virtual executive certification in succession planning. Plan transitions of key personnel and leadership to ensure organisational continuity — high-potential talent, competency frameworks, the 9-Box Matrix, career pathing and leadership development. 6–9 October 2026, 4 days.",
     provider: {
       "@type": "EducationalOrganization",
       name: "ORASIUS",
       sameAs: "https://www.orasius.com",
     },
-    startDate: "2026-09-15",
+    startDate: "2026-10-06",
+    endDate: "2026-10-09",
     educationalCredentialAwarded: "Executive Certification",
     courseMode: "online",
   };
