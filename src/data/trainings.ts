@@ -2,6 +2,7 @@ export interface Training {
   id: string;
   title: string;
   tagline: string;
+  summary: string;
   description: string;
   date: string;
   duration: string;
@@ -27,6 +28,8 @@ export const ongoingTrainings: Training[] = [
     id: "certified-succession-planning-oct-2026",
     title: "Certified in Succession Planning",
     tagline: "Lead today. Build tomorrow. Plan succession.",
+    summary:
+      "Build a practical succession framework and secure leadership continuity.",
     description:
       "A live virtual executive certification that helps organisations effectively plan the transition of key personnel and leadership to ensure continuity. Build a practical succession framework, identify and develop high-potential talent, and strengthen leadership continuity and organisational readiness.",
     date: "6–9 October 2026",
@@ -92,5 +95,51 @@ export const ongoingTrainings: Training[] = [
     registerPath: "/register",
     whatsappLink:
       "https://wa.me/918884386913?text=Hello%2C%20I%20want%20to%20secure%20my%20seat%20for%20the%20Certified%20in%20Succession%20Planning%20training%20(6-9%20October%202026)",
+  },
+  {
+    id: "business-writing-ai-sep-2026",
+    title: "Certification in Advanced Business Writing Using AI",
+    tagline: "Write like a leader. Use AI like a professional.",
+    summary:
+      "Master executive reports, proposals and strategic communication using AI.",
+    description:
+      "Write like a leader. Use AI like a professional. Master executive reports, proposals, policies and strategic communication using AI.",
+    date: "15 September 2026",
+    duration: "1 Day",
+    format: "Live Virtual Training",
+    certification: "Professional Certification",
+    posterImage: "/images/business-writing-training.png",
+    posterAlt:
+      "Orasius Certification in Advanced Business Writing Using AI training poster",
+    outcomes: [
+      "Structure executive reports, proposals and policies with clarity.",
+      "Apply AI tools responsibly to draft, edit and refine business documents.",
+      "Adapt tone and style for senior stakeholders.",
+      "Reduce writing time while improving quality and consistency.",
+    ],
+    highlights: [
+      "Executive Report Writing",
+      "Proposals & Policies",
+      "Strategic Communication",
+      "AI-Assisted Drafting & Editing",
+      "Tone, Clarity & Structure",
+    ],
+    audience: [
+      "Managers and Team Leaders",
+      "HR and L&D Professionals",
+      "Corporate Communications Professionals",
+      "Business Analysts and Consultants",
+    ],
+    trainer: {
+      name: "ORASIUS Trainer",
+      role: "Business Communication & AI Productivity Specialist",
+      credentials: [
+        "Certified Master Trainer",
+        "Extensive international corporate training experience",
+      ],
+    },
+    registerPath: "/register",
+    whatsappLink:
+      "https://wa.me/918884386913?text=Hello%2C%20I%20want%20to%20secure%20my%20seat%20for%20the%20Advanced%20Business%20Writing%20Using%20AI%20certification",
   },
 ];
