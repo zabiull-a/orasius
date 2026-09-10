@@ -8,7 +8,7 @@ import { ongoingTrainings } from "@/data/trainings";
 import {
   CalendarDays,
   Monitor,
-  ArrowRight,
+  MessageCircle,
   ChevronLeft,
   ChevronRight,
   UserRound,
