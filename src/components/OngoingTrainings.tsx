@@ -141,10 +141,15 @@ const OngoingTrainings = () => {
                           size="lg"
                           className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold"
                         >
-                          <Link to={training.registerPath}>
-                            Secure Your Seat Today{" "}
-                            <ArrowRight className="ml-1 h-4 w-4" />
-                          </Link>
+                          <a
+                            href={training.whatsappLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Book your seat for ${training.title} via WhatsApp`}
+                          >
+                            <MessageCircle className="mr-2 h-4 w-4" />
+                            Book Your Seat via WhatsApp
+                          </a>
                         </Button>
                       </div>
                     </div>
