@@ -176,16 +176,16 @@ const Index = () => {
   const courseJsonLd = {
     "@context": "https://schema.org",
     "@type": "Course",
-    name: "Certified in Succession Planning",
+    name: "Advanced IFRS: AI-Powered Consolidation & Sustainability Metrics",
     description:
-      "Live virtual executive certification in succession planning. Plan transitions of key personnel and leadership to ensure organisational continuity — high-potential talent, competency frameworks, the 9-Box Matrix, career pathing and leadership development. 6–9 October 2026, 4 days.",
+      "Live virtual executive certification for finance leaders working at the sharp end of IFRS. Apply advanced IFRS frameworks, use AI in group consolidation, and report sustainability metrics with confidence. 17–19 November 2026, 3 days.",
     provider: {
       "@type": "EducationalOrganization",
       name: "ORASIUS",
       sameAs: "https://www.orasius.com",
     },
-    startDate: "2026-10-06",
-    endDate: "2026-10-09",
+    startDate: "2026-11-17",
+    endDate: "2026-11-19",
     educationalCredentialAwarded: "Executive Certification",
     courseMode: "online",
   };
