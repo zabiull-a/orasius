@@ -33,11 +33,11 @@ export const ongoingTrainings: Training[] = [
       "Master advanced IFRS frameworks through real-world consolidation and sustainability reporting.",
     description:
       "A live virtual executive certification for finance leaders working at the sharp end of IFRS. Master advanced IFRS frameworks through real-world application, apply AI to group consolidation, and report sustainability metrics with confidence — turning complex compliance into strategic business advantage.",
-    date: "17–19 November 2026",
+    date: "17–28 November 2026",
     duration: "3 Days",
     format: "Live Virtual Training",
     certification: "Executive Certification",
-    posterImage: "/images/advanced-ifrs-training.jpeg",
+    posterImage: "/images/advanced-ifrs-training.png",
     posterAlt:
       "Orasius Advanced IFRS AI-Powered Consolidation and Sustainability Metrics executive certification training poster",
     outcomes: [
@@ -73,6 +73,6 @@ export const ongoingTrainings: Training[] = [
     },
     registerPath: "/register",
     whatsappLink:
-      "https://wa.me/918884386913?text=Hello%2C%20I%20want%20to%20secure%20my%20seat%20for%20the%20Advanced%20IFRS%20training%20(17-19%20November%202026)",
+      "https://wa.me/918884386913?text=Hello%2C%20I%20want%20to%20secure%20my%20seat%20for%20the%20Advanced%20IFRS%20training%20(17-28%20November%202026)",
   },
 ];

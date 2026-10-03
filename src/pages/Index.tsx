@@ -178,14 +178,14 @@ const Index = () => {
     "@type": "Course",
     name: "Advanced IFRS: AI-Powered Consolidation & Sustainability Metrics",
     description:
-      "Live virtual executive certification for finance leaders working at the sharp end of IFRS. Apply advanced IFRS frameworks, use AI in group consolidation, and report sustainability metrics with confidence. 17–19 November 2026, 3 days.",
+      "Live virtual executive certification for finance leaders working at the sharp end of IFRS. Apply advanced IFRS frameworks, use AI in group consolidation, and report sustainability metrics with confidence. 17–28 November 2026, 3 days.",
     provider: {
       "@type": "EducationalOrganization",
       name: "ORASIUS",
       sameAs: "https://www.orasius.com",
     },
     startDate: "2026-11-17",
-    endDate: "2026-11-19",
+    endDate: "2026-11-28",
     educationalCredentialAwarded: "Executive Certification",
     courseMode: "online",
   };
