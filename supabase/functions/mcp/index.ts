@@ -214,7 +214,7 @@ var ongoingTrainings = [
     tagline: "Turn complex compliance into strategic business advantage.",
     summary: "Master advanced IFRS frameworks through real-world consolidation and sustainability reporting.",
     description: "A live virtual executive certification for finance leaders working at the sharp end of IFRS. Master advanced IFRS frameworks through real-world application, apply AI to group consolidation, and report sustainability metrics with confidence \u2014 turning complex compliance into strategic business advantage.",
-    date: "17\u201328 November 2026",
+    date: "17\u201320 November 2026",
     duration: "3 Days",
     format: "Live Virtual Training",
     certification: "Executive Certification",
@@ -252,7 +252,7 @@ var ongoingTrainings = [
       ]
     },
     registerPath: "/register",
-    whatsappLink: "https://wa.me/918884386913?text=Hello%2C%20I%20want%20to%20secure%20my%20seat%20for%20the%20Advanced%20IFRS%20training%20(17-28%20November%202026)"
+    whatsappLink: "https://wa.me/918884386913?text=Hello%2C%20I%20want%20to%20secure%20my%20seat%20for%20the%20Advanced%20IFRS%20training%20(17-20%20November%202026)"
   }
 ];
 
