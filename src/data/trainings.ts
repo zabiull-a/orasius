@@ -10,15 +10,16 @@ export interface Training {
   certification: string;
   posterImage: string;
   posterAlt: string;
-  outcomes: string[];
+  outcomes?: string[];
   highlights: string[];
-  audience: string[];
+  audience?: string[];
   trainer: {
     name: string;
     role: string;
     credentials: string[];
   };
   registerPath: string;
+  detailsPath?: string;
   whatsappLink: string;
   brochureLink?: string;
 }
@@ -75,4 +76,44 @@ export const ongoingTrainings: Training[] = [
     whatsappLink:
       "https://wa.me/918884386913?text=Hello%2C%20I%20want%20to%20secure%20my%20seat%20for%20the%20Advanced%20IFRS%20training%20(17-20%20November%202026)",
   },
+  {
+    id: "mastering-supply-chain-procurement-ai-dec-2026",
+    title: "Mastering Supply Chain and Procurement Using AI",
+    tagline:
+      "Transforming AI & Procurement into strategic supply chain advantage, driving organizational value.",
+    summary:
+      "Turn AI and procurement into strategic supply chain advantage that drives organizational value.",
+    description:
+      "A live virtual executive certification for supply chain and procurement leaders. Learn how artificial intelligence is reshaping modern supply chain management and procurement, and how to transform AI capability and procurement practice into strategic supply chain advantage that drives measurable organizational value.",
+    date: "2–4 December 2026",
+    duration: "3 Days",
+    format: "Live Virtual Training",
+    certification: "Executive Certification",
+    posterImage: "/images/supply-chain-training.jpeg",
+    posterAlt:
+      "Orasius Mastering Supply Chain and Procurement Using AI executive certification training poster",
+    highlights: [
+      "AI in Modern Supply Chain Management",
+      "AI in Procurement",
+      "Strategic Supply Chain Advantage",
+      "Driving Organizational Value",
+      "Live Virtual Training",
+      "Executive Certification",
+    ],
+    trainer: {
+      name: "ORASIUS Trainer",
+      role: "Supply Chain & Procurement Specialist",
+      credentials: [
+        "Supply chain and procurement specialist",
+        "Executive education facilitator",
+      ],
+    },
+    registerPath: "/register",
+    detailsPath: "/training/mastering-supply-chain-procurement-using-ai",
+    whatsappLink:
+      "https://wa.me/918884386913?text=Hello%2C%20I%20want%20to%20secure%20my%20seat%20for%20the%20Mastering%20Supply%20Chain%20and%20Procurement%20Using%20AI%20training%20(2-4%20December%202026)",
+  },
 ];
+
+export const getTrainingBySlug = (slug: string) =>
+  ongoingTrainings.find((t) => t.detailsPath === `/training/${slug}`);
